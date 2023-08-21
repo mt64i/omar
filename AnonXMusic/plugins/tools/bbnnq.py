@@ -3,7 +3,6 @@ import os
 import random
 import asyncio
 from pyrogram import Client, filters
-from strings.filters import command
 from pyrogram.types import (Message,
 InlineKeyboardMarkup,InlineKeyboardButton)
 from typing import Union
@@ -37,7 +36,7 @@ def get_file_id(msg: Message):
 
 
 @app.on_message(
-    command(["المطور","المبرمج"])
+    filters.command(["dev"])
     & filters.group
     & ~filters.edited
 )
@@ -56,7 +55,7 @@ async def khalid(client: Client, message: Message, OWNER: Union[bool, int] = Non
             ]
         ),
     )
-@app.on_message(command("ايما"))
+@app.on_message(filters.command("Emma"))
 async def bottttt(client, message):
     selections = ["عمرها لأيما", 
 "يا قلب ايما",
@@ -67,7 +66,7 @@ async def bottttt(client, message):
     bar = random.choice(selections)
     await message.reply_text(bar)
     
-@app.on_message(command("بحبك"))
+@app.on_message(filters.command("loveyou"))
 async def bottttt(client, message):
     selections = ["يخليلي قلبك", 
 "بحبك اكتر على فكرة!",
@@ -78,7 +77,7 @@ async def bottttt(client, message):
     bar = random.choice(selections)
     await message.reply_text(bar)
 
-@app.on_message(command("الاوامر"))
+@app.on_message(filters.command("com"))
 async def ahmad(client: Client, message: Message):
     await message.reply_text(f"""**اليك أوامر بوت ايما**:
 
