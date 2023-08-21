@@ -2,7 +2,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForbidden
-from AnonX import app
+from AnonXMusic import app
 
 
 @app.on_message(~filters.edited & filters.incoming & filters.private, group=-1)
