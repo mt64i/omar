@@ -2,6 +2,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from AnonXMusic import app
+from strings.filters import command
 from AnonXMusic.core.call import Anony
 from AnonXMusic.misc import SUDOERS, db
 from AnonXMusic.utils import AdminRightsCheck
@@ -14,7 +15,7 @@ checker = []
 
 
 @app.on_message(
-    filters.command(["cspeed", "speed", "cslow", "slow", "playback", "cplayback"])
+    command(["/cspeed", "/speed", "تسريع"])
     & filters.group
     & ~BANNED_USERS
 )
