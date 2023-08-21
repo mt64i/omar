@@ -7,7 +7,7 @@ from strings.filters import command
 from pyrogram.types import (Message,
 InlineKeyboardMarkup,InlineKeyboardButton)
 from typing import Union
-from AnonX import app
+from AnonXMusic import app
 
 
 
@@ -39,7 +39,6 @@ def get_file_id(msg: Message):
 @app.on_message(
     command(["المطور","المبرمج"])
     & filters.group
-    & ~filters.edited
 )
 async def khalid(client: Client, message: Message, OWNER: Union[bool, int] = None):
     usr = await client.get_users(5866649827)
@@ -63,7 +62,8 @@ async def bottttt(client, message):
 "صرعت راسها لأيما",
 "لك نعم يا عيوني",
 "تؤبرني معك",
-"تفضل عم أسمع واللهي نصرعت",]
+"تفضل عم أسمع واللهي نصرعت",
+"أختصر ؟",]
     bar = random.choice(selections)
     await message.reply_text(bar)
     
@@ -74,7 +74,9 @@ async def bottttt(client, message):
 "بتنفسك",
 "ياعمري انااااا",
 "تفضل واطلب ايدي من @bbnnQ",
-"لا اله الا الله وانا بحبك",]
+"لا اله الا الله وانا بحبك",
+"خلص أستحي عيب",
+"خلاص يا مز خجلت",]
     bar = random.choice(selections)
     await message.reply_text(bar)
 
@@ -86,10 +88,9 @@ async def ahmad(client: Client, message: Message):
 ‹: تخطي - لتخطي الأغنية 🎵
 ‹: انهاء - لانهاء تشغيل الاغنية 🎵
 ‹: تحميل - مع أسم الأغنية او الفيديو 🎬
-‹: كت - لبدأ لعبة الكت تويت ❤️
-‹: صراحة - لبدأ لعبة الصراحه ❤️
-‹: لو خيروك - لبدأ لعبة لو خيروك ❤️
-‹: حروف - لبدأ لعبة الحروف ❤️""",
+‹: توقف - لايقاف التشغيل مؤقتاً 🔇
+‹: تكميل - لتكميل الاغنية المتوقفة 🔊
+""",
         reply_markup=InlineKeyboardMarkup(
         [
             [
