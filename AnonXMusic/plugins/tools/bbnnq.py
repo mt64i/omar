@@ -7,7 +7,7 @@ from strings.filters import command
 from pyrogram.types import (Message,
 InlineKeyboardMarkup,InlineKeyboardButton)
 from typing import Union
-from AnonX import app
+from AnonXMusic import app
 
 
 
@@ -46,7 +46,7 @@ async def khalid(client: Client, message: Message, OWNER: Union[bool, int] = Non
     name = usr.first_name
     bio = (await client.get_chat(5866649827)).bio
     async for photo in client.iter_profile_photos(5866649827, limit=1):
-                    await message.reply_photo(photo.file_id,   caption=f"- DevLoper: [Ahmed](https://t.me/bbnnq\n- Bio: {bio}",
+                    await message.reply_photo(photo.file_id,   caption=f"Bio: {bio}",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
