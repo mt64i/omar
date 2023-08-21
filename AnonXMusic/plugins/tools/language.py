@@ -1,5 +1,6 @@
 from pykeyboard import InlineKeyboard
 from pyrogram import filters
+from strings.filters import command
 from pyrogram.types import InlineKeyboardButton, Message
 
 from AnonXMusic import app
@@ -32,7 +33,7 @@ def lanuages_keyboard(_):
     return keyboard
 
 
-@app.on_message(filters.command(["lang", "setlang", "language"]) & ~BANNED_USERS)
+@app.on_message(command(["/lang", "/setlang", "/language", "اللغة"]) & ~BANNED_USERS)
 @language
 async def langs_command(client, message: Message, _):
     keyboard = lanuages_keyboard(_)
