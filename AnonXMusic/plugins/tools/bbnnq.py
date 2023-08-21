@@ -11,50 +11,6 @@ from AnonXMusic import app
 
 
 
-
-def get_file_id(msg: Message):
-    if msg.media:
-        for message_type in (
-            "photo",
-            "animation",
-            "audio",
-            "document",
-            "video",
-            "video_note",
-            "voice",
-            "contact",
-            "dice",
-            "poll",
-            "location",
-            "venue",
-            "sticker",
-        ):
-            obj = getattr(msg, message_type)
-            if obj:
-                setattr(obj, "message_type", message_type)
-                return obj
-
-
-
-@app.on_message(
-    command(["المطور","المبرمج"])
-    & filters.group
-)
-async def khalid(client: Client, message: Message, OWNER: Union[bool, int] = None):
-    usr = await client.get_users(5866649827)
-    name = usr.first_name
-    bio = (await client.get_chat(5866649827)).bio
-    async for photo in client.iter_profile_photos(5866649827, limit=1):
-                    await message.reply_photo(photo.file_id,   caption=f"- Bio: {bio}",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        name, user_id=5866649827)
-                ],
-            ]
-        ),
-    )
 @app.on_message(command("ايما"))
 async def bottttt(client, message):
     selections = ["عمرها لأيما", 
