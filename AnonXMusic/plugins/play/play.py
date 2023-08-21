@@ -46,14 +46,14 @@ async def check_is_joined(message, Message, client):
 @app.on_message(
     filters.command(
         [
-            "/play",
-            "/vplay",
-            "/cplay",
-            "/cvplay",
-            "/playforce",
-            "/vplayforce",
-            "/cplayforce",
-            "/cvplayforce",
+            "play",
+            "vplay",
+            "cplay",
+            "cvplay",
+            "playforce",
+            "vplayforce",
+            "cplayforce",
+            "cvplayforce",
         ]
     )
     & filters.group
