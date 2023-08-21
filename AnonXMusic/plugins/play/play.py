@@ -6,6 +6,7 @@ from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
+from strings.filters from command
 from AnonXMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
 from AnonXMusic.core.call import Anony
 from AnonXMusic.utils import seconds_to_min, time_to_seconds
@@ -26,7 +27,7 @@ from config import BANNED_USERS, lyrical
 
 
 @app.on_message(
-    filters.command(
+    command(
         [
             "play",
             "vplay",
@@ -36,6 +37,7 @@ from config import BANNED_USERS, lyrical
             "vplayforce",
             "cplayforce",
             "cvplayforce",
+            "تشغيل",
         ]
     )
     & filters.group
