@@ -32,6 +32,11 @@
         "value": "",
         "required": true
       },
+      "GIT_TOKEN":{
+        "description": "",
+        "value": "",
+        "required": false
+      },  
       "OWNER_ID": {
         "description": "The user id of user whom you would like to add as OWNER.",
         "value": "",
