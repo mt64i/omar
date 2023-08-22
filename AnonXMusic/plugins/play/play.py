@@ -43,7 +43,7 @@ from config import BANNED_USERS, lyrical
     & filters.group
     & ~BANNED_USERS
 )
-@app.on_message(command([تشغيل])
+@app.on_message(command(["تشغيل"])
     & filters.group
     & ~BANNED_USERS
 )
