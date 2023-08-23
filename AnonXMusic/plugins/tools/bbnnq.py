@@ -69,7 +69,7 @@ async def chat(bot, message):
         await bot.send_chat_action(message.chat.id, ChatAction.TYPING)
         if len(message.command) < 2:
             await message.reply_text(
-            "Example:**\n\nسؤال كم عدد سكان سوريا ؟ ")
+            "مثال:\n\nسؤال كم عدد سكان سوريا ؟ ")
         else:
             a = message.text.split(' ', 1)[1]
             MODEL = "gpt-3.5-turbo"
