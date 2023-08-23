@@ -5,14 +5,19 @@ import asyncio,time
 from datetime import datetime
 from pyrogram import Client, filters, enums
 from pyrogram.enums import ChatAction, ParseMode
-from bardapi import Bard
 from strings.filters import command
 from pyrogram.types import (Message,
 InlineKeyboardMarkup,InlineKeyboardButton)
 from typing import Union
 from AnonXMusic import app
 
-
+X = [
+    [
+        InlineKeyboardButton(text="شڪࢪ لـ", url=f"https://t.me/bbnnq"),
+        
+        InlineKeyboardButton(text=" التحديثات ", url=f"https://t.me/cczza"),
+    ]
+    ]
 
 @app.on_message(command("ايما"))
 async def bottttt(client, message):
@@ -60,19 +65,24 @@ async def ahmad(client: Client, message: Message):
             ]
         ),
     )
-
-bard = Bard(token="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")   
-@app.on_message(command("سؤال"))
-async def bard_bot(bot, message):
+openai.api_key = "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" 
+@app.on_message(command(["chatgpt","ai","سؤال"]))
+async def chat(bot, message):
+    
     try:
         start_time = time.time()
         await bot.send_chat_action(message.chat.id, ChatAction.TYPING)
         if len(message.command) < 2:
             await message.reply_text(
-            "مثال:**\n\n`ايما كيف حالك`")
+            "مثال:**\n\n`كم عدد سكان سوريا؟ `")
         else:
             a = message.text.split(' ', 1)[1]
-            response=bard.get_answer(f"{a}")["content"]
-            await message.reply_text(f"{response}\n\n🎉تم بواسطة @EmCamusicBot ", parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup(X))     
+            MODEL = "gpt-3.5-turbo"
+            resp = openai.ChatCompletion.create(model=MODEL,messages=[{"role": "user", "content": a}],
+    temperature=0.2)
+            x=resp['choices'][0]["message"]["content"]
+            end_time = time.time()
+            telegram_ping = str(round((end_time - start_time) * 1000, 3)) + " ᴍs"
+            await message.reply_text(f"{message.from_user.first_name} ᴀꜱᴋᴇᴅ:\n\n {a} \n\n Emma Call ᴀɴꜱᴡᴇʀᴇᴅ:-\n\n {x}\n\n✨وقت العمل {telegram_ping} \n\n🎉تم لواسطة @EmCaMusicBot", parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup(X))     
     except Exception as e:
-        await message.reply_text(f"**خطأ:  {e} ")
+        await message.reply_text(f"**خطأ: {e} ")
