@@ -4,6 +4,7 @@ import random
 import asyncio,time
 from datetime import datetime
 from pyrogram import Client, filters, enums
+import openai
 from pyrogram.enums import ChatAction, ParseMode
 from strings.filters import command
 from pyrogram.types import (Message,
