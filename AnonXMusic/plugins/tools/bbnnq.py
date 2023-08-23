@@ -61,7 +61,7 @@ async def ahmad(client: Client, message: Message):
         ),
     )
 openai.api_key = "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"
-@app.on_message(command(["chatgpt","ai","سؤال"],  prefixes=["+", " ", "/", "-", "?", "$","#","&"]))
+@app.on_message(command(["chatgpt","ai","سؤال"]))
 async def chat(bot, message):
     
     try:
