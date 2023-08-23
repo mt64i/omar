@@ -67,7 +67,7 @@ async def ahmad(client: Client, message: Message):
         ),
     )
 openai.api_key = "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" 
-@app.on_message(command(["chatgpt","ai","ايما"]))
+@app.on_message(command(["/chatgpt","/ai","ايما"]))
 async def chat(bot, message):
     
     try:
@@ -84,6 +84,6 @@ async def chat(bot, message):
             x=resp['choices'][0]["message"]["content"]
             end_time = time.time()
             telegram_ping = str(round((end_time - start_time) * 1000, 3)) + " ᴍs"
-            await message.reply_text(f"{message.from_user.first_name} 🤍🤍:\n\n {a} \n\n• تقول إيما أن:\n\n {x}\n\n• وقت البدأ:{telegram_ping} \n\n• تم بواسطة: @EmCaMusicBot", parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup(X))     
+            await message.reply_text(f"{message.from_user.first_name}:\n\n {x}", parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup(X))     
     except Exception as e:
         await message.reply_text(f"**خطأ: {e} ")
