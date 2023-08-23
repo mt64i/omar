@@ -1,8 +1,7 @@
 import random
 import string
-from ast import ExceptHandler
 from pyrogram import filters
-from pyrogram.types import InlineKeyboardMarkup,InlineKeyboardButton, InputMediaPhoto, Message
+from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
@@ -25,23 +24,6 @@ from AnonXMusic.utils.logger import play_logs
 from AnonXMusic.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical
 
-force_btn = InlineKeyboardMarkup(
-    [
-        [
-            InlineKeyboardButton(   
-              text=f"Victorious", url=f"t.me/cczza",)                        
-        ],        
-    ]
-)
-async def check_is_joined(message, Message, client):    
-    try:
-        userid = message.from_user.id
-        user_name = message.from_user.first_name
-        status = await app.get_chat_member("cczza", userid)
-        return True
-    except Exception:
-        await message.reply_text(f'⌯︙عذراً : [{message.from_user.first_name}](tg://user?id={message.from_user.id})\n⌯︙عليك الأشتراك في قناة البوت أولاً !\n⌯︙قناة البوت : @cczza ⚠️.\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ',reply_markup)
-        return False
 
 @app.on_message(command(["تشغيل",])
     & filters.group
@@ -67,8 +49,6 @@ async def play_commnd(
     url,
     fplay,
 ):
-    if not await check_is_joined(message, Message, client):
-        return
     mystic = await message.reply_text(
         _["play_2"].format(channel) if channel else _["play_1"]
     )
