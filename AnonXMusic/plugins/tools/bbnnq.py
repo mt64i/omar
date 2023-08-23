@@ -19,7 +19,7 @@ X = [
     ]
     ]
 
-@app.on_message(command("ايما"))
+@app.on_message(command("إيما"))
 async def bottttt(client, message):
     selections = ["عمرها لأيما", 
 "يا قلب ايما",
@@ -66,7 +66,7 @@ async def ahmad(client: Client, message: Message):
         ),
     )
 openai.api_key = "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" 
-@app.on_message(command(["chatgpt","ai","سؤال"]))
+@app.on_message(command(["chatgpt","ai","ايما"]))
 async def chat(bot, message):
     
     try:
@@ -74,7 +74,7 @@ async def chat(bot, message):
         await bot.send_chat_action(message.chat.id, ChatAction.TYPING)
         if len(message.command) < 2:
             await message.reply_text(
-            "مثال:**\n\n`كم عدد سكان سوريا؟ `")
+            "مثال:**\n\n`ايما كم عدد سكان سوريا؟ `")
         else:
             a = message.text.split(' ', 1)[1]
             MODEL = "gpt-3.5-turbo"
