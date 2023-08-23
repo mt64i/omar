@@ -1,8 +1,11 @@
 # telegram: @bbnnQ ~ My channel: @ccooR حقوق.
 import os
 import random
-import asyncio
-from pyrogram import Client, filters
+import asyncio,time
+import openai
+from pyrogram import Client, filters, enums
+from pyrogram.enums import ChatAction, ParseMode
+from datetime import datetime
 from strings.filters import command
 from pyrogram.types import (Message,
 InlineKeyboardMarkup,InlineKeyboardButton)
@@ -45,7 +48,7 @@ async def ahmad(client: Client, message: Message):
 ‹: انهاء - لانهاء تشغيل الاغنية 🎵
 ‹: تحميل - مع أسم الأغنية او الفيديو 🎬
 ‹: توقف - لايقاف التشغيل مؤقتاً 🔇
-‹: تكميل - لتكميل الاغنية المتوقفة 🔊:
+‹: تكميل - لتكميل الاغنية المتوقفة 🔊
 ‹: اللغه - لتغير لغة البوت 🇦🇪
 ‹: تسريع - لتغيير سرعة الصوت 🎚
 """,
@@ -57,3 +60,24 @@ async def ahmad(client: Client, message: Message):
             ]
         ),
     )
+openai.api_key = OPENAI_KEY
+@app.on_message(filters.command(["chatgpt","ai","سؤال"],  prefixes=["+", " ", "/", "-", "?", "$","#","&"]))
+async def chat(bot, message):
+    
+    try:
+        start_time = time.time()
+        await bot.send_chat_action(message.chat.id, ChatAction.TYPING)
+        if len(message.command) < 2:
+            await message.reply_text(
+            "Example:**\n\n`سؤال كم عدد سكان سوريا ؟ `")
+        else:
+            a = message.text.split(' ', 1)[1]
+            MODEL = "gpt-3.5-turbo"
+            resp = openai.ChatCompletion.create(model=MODEL,messages=[{"role": "user", "content": a}],
+    temperature=0.2)
+            x=resp['choices'][0]["message"]["content"]
+            end_time = time.time()
+            telegram_ping = str(round((end_time - start_time) * 1000, 3)) + " ᴍs"
+            await message.reply_text(f"{message.from_user.first_name} ᴀꜱᴋᴇᴅ:\n\n {a} \n\n {BOT_NAME} ᴀɴꜱᴡᴇʀᴇᴅ:-\n\n {x}\n\n✨ᴛɪᴍᴇ ᴛᴀᴋᴇɴ  {telegram_ping} \n\n🎉ᴘᴏᴡᴇʀᴇᴅ ʙʏ @{BOT_USERNAME} ", parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup(X))     
+    except Exception as e:
+        await message.reply_text(f"**خطأ: {e} ")
