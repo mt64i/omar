@@ -5,7 +5,7 @@ import asyncio,time
 from datetime import datetime
 from pyrogram import Client, filters, enums
 from pyrogram.enums import ChatAction, ParseMode
-import openai
+from bardapi import Bard
 from strings.filters import command
 from pyrogram.types import (Message,
 InlineKeyboardMarkup,InlineKeyboardButton)
@@ -61,26 +61,18 @@ async def ahmad(client: Client, message: Message):
         ),
     )
 
-x=["❤️","🎉","✨","🪸","🎉","🎈","🎯"]
-
-openai.api_key = "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"
-@app.on_message(command(["chatgpt","ai","سؤال"]))
-async def chat(bot, message):
-    
+bard = Bard(token="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")   
+@app.on_message(command("سؤال"))
+async def bard_bot(bot, message):
     try:
         start_time = time.time()
         await bot.send_chat_action(message.chat.id, ChatAction.TYPING)
         if len(message.command) < 2:
             await message.reply_text(
-            "مثال:\n\nسؤال كم عدد سكان سوريا ؟ ")
+            "مثال:**\n\n`ايما كيف حالك`")
         else:
             a = message.text.split(' ', 1)[1]
-            MODEL = "gpt-3.5-turbo"
-            resp = openai.ChatCompletion.create(model=MODEL,messages=[{"role": "user", "content": a}],
-    temperature=0.2)
-            x=resp['choices'][0]["message"]["content"]
-            end_time = time.time()
-            telegram_ping = str(round((end_time - start_time) * 1000, 3)) + " ᴍs"
-            await message.reply_text(f"{message.from_user.first_name} {telegram_ping}", parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup(X))     
+            response=bard.get_answer(f"{a}")["content"]
+            await message.reply_text(f"{response}\n\n🎉تم بواسطة @EmCamusicBot ", parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup(X))     
     except Exception as e:
-        await message.reply_text(f"**خطأ: {e} ")
+        await message.reply_text(f"**خطأ:  {e} ")
