@@ -26,7 +26,7 @@ def song(client, message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    m = message.reply("** جاࢪ البحث لحظة...**")
+    m = message.reply("جاࢪ البحث لحظة...")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -44,7 +44,7 @@ def song(client, message):
 
     except Exception as e:
         m.edit(
-            "**لم يتم العثوࢪ على الأغنية أو الفيديو.**\n\nحاول مرة أخࢪى..!"
+            "لم يتم العثوࢪ على الأغنية أو الفيديو.\n\nحاول مرة أخࢪى..!"
         )
         print(str(e))
         return
@@ -54,7 +54,7 @@ def song(client, message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f"**الأسم:** {title[:25]}\n**الوصف:** `{duration}`\n**المشاهدات:** `{views}`\n**بواسطة:​** {chutiya}"
+        rep = f"الأسم: {title[:25]}\nالوصف: `{duration}`\nالمشاهدات: `{views}`\nبواسطة:​ {chutiya}"
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(dur_arr[i]) * secmul
@@ -62,7 +62,7 @@ def song(client, message):
         message.reply_audio(
             audio_file,
             caption=rep,
-            performer=BOT_NAME,
+            performer="Emma Music",
             thumb=thumb_name,
             title=title,
             duration=dur,
@@ -70,7 +70,7 @@ def song(client, message):
         m.delete()
     except Exception as e:
         m.edit(
-            f"**حدث خطأ اثناء التحميل » [أبࢪيل](t.me/cczza) 💕**\n\**خطأ :** {e}"
+            f"حدث خطأ اثناء التحميل » [أبࢪيل](t.me/cczza) 💕**\n\**خطأ :** {e}"
         )
         print(e)
 
