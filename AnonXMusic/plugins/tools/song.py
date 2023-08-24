@@ -14,7 +14,7 @@ def time_to_seconds(time):
     return sum(int(x) * 60**i for i, x in enumerate(reversed(stringt.split(":"))))
 
 
-@apl.on_message(command(["/song", "بحث","تحميل"]))
+@app.on_message(command(["/song", "بحث","تحميل"]))
 def song(client, message):
 
     message.delete()
