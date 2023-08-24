@@ -18,7 +18,6 @@ pyyaml
 requests
 speedtest-cli
 spotipy
-openai==0.27.2
 tgcrypto
 unidecode
 yt-dlp
