@@ -6,7 +6,7 @@ from pyrogram import filters
 from strings.filters import command
 from youtube_search import YoutubeSearch
 
-from AnknXMusic import app
+from AnonXMusic import app
 
 
 def time_to_seconds(time):
