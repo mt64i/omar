@@ -3,9 +3,10 @@ import os
 import requests
 import yt_dlp
 from pyrogram import filters
+from strings.filters import command
 from youtube_search import YoutubeSearch
 
-from MukeshRobot import SUPPORT_CHAT, pbot,BOT_NAME
+from AnknXMusic import app
 
 
 def time_to_seconds(time):
@@ -13,7 +14,7 @@ def time_to_seconds(time):
     return sum(int(x) * 60**i for i, x in enumerate(reversed(stringt.split(":"))))
 
 
-@pbot.on_message(filters.command(["song", "music"]))
+@apl.on_message(command(["/song", "بحث","تحميل"]))
 def song(client, message):
 
     message.delete()
@@ -25,7 +26,7 @@ def song(client, message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    m = message.reply("**» sᴇᴀʀᴄʜɪɴɢ, ᴩʟᴇᴀsᴇ ᴡᴀɪᴛ...**")
+    m = message.reply("** جاࢪ البحث لحظة...**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -43,17 +44,17 @@ def song(client, message):
 
     except Exception as e:
         m.edit(
-            "**😴 sᴏɴɢ ɴᴏᴛ ғᴏᴜɴᴅ ᴏɴ ʏᴏᴜᴛᴜʙᴇ.**\n\n» ᴍᴀʏʙᴇ ᴛᴜɴᴇ ɢᴀʟᴀᴛ ʟɪᴋʜᴀ ʜᴏ, ᴩᴀᴅʜᴀɪ - ʟɪᴋʜᴀɪ ᴛᴏʜ ᴋᴀʀᴛᴀ ɴᴀʜɪ ᴛᴜ !"
+            "**لم يتم العثوࢪ على الأغنية أو الفيديو.**\n\nحاول مرة أخࢪى..!"
         )
         print(str(e))
         return
-    m.edit("» ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...\n\nᴩʟᴇᴀsᴇ ᴡᴀɪᴛ...")
+    m.edit("جاࢪ التنزيل\n\nأنتظࢪ لحظة...!")
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f"**ᴛɪᴛʟᴇ :** {title[:25]}\n**ᴅᴜʀᴀᴛɪᴏɴ :** `{duration}`\n**ᴠɪᴇᴡs :** `{views}`\n**ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ​ »** {chutiya}"
+        rep = f"**الأسم:** {title[:25]}\n**الوصف:** `{duration}`\n**المشاهدات:** `{views}`\n**بواسطة:​** {chutiya}"
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(dur_arr[i]) * secmul
@@ -69,7 +70,7 @@ def song(client, message):
         m.delete()
     except Exception as e:
         m.edit(
-            f"**» ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴇʀʀᴏʀ, ʀᴇᴩᴏʀᴛ ᴛʜɪs ᴀᴛ​ » [sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ](t.me/{SUPPORT_CHAT}) 💕**\n\**ᴇʀʀᴏʀ :** {e}"
+            f"**حدث خطأ اثناء التحميل » [أبࢪيل](t.me/cczza) 💕**\n\**خطأ :** {e}"
         )
         print(e)
 
@@ -80,7 +81,6 @@ def song(client, message):
         print(e)
 
 
-__mod_name__ = "Sᴏɴɢ"
+__mod_name__ = "اليوتيوب"
 __help__ = """
-/song ᴛᴏ  ᴅᴏᴡɴʟᴏᴀᴅ   ᴀɴʏ  sᴏɴɢ 
-/music ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ᴀɴʏ  sᴏɴɢ"""
+بحث او تحميل مع رابط الاغنية او اسمها """
