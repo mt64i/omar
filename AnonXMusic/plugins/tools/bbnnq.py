@@ -2,15 +2,24 @@
 import os
 import random
 import asyncio
-from pyrogram import Client, filters
+from pyrogram import Client,filters,enums
+from pyrogram.enums import ParseMode
 from strings.filters import command
 from pyrogram.types import (Message,
 InlineKeyboardMarkup,InlineKeyboardButton)
+from bardapi import Bard
 from typing import Union
 from AnonXMusic import app
 
+X = [
+    [
+        InlineKeyboardButton(text="شڪࢪ لـ", url=f"https://t.me/bbnnq"),
+        
+        InlineKeyboardButton(text="أبࢪيل", url=f"https://t.me/cczza"),
+    ]
+    ]
 
-@app.on_message(command("ايما"))
+@app.on_message(command("إيما"))
 async def bottttt(client, message):
     selections = ["عمرها لأيما", 
 "يا قلب ايما",
@@ -56,3 +65,18 @@ async def ahmad(client: Client, message: Message):
             ]
         ),
     )
+bard = Bard(token="ZAh395TleUASSaCZIqVE93XHunrWHTdevB64OSxtw9duOkkiZQbFWlVo8IixnCaCSTEpWA.")   
+@app.on_message(command("ايما"))
+async def bard_bot(bot, message):
+    try:
+        start_time = time.time()
+        await bot.send_chat_action(message.chat.id, ChatAction.TYPING)
+        if len(message.command) < 2:
+            await message.reply_text(
+            "مثال:\n\n`ايما كيف حالك؟ `")
+        else:
+            a = message.text.split(' ', 1)[1]
+            response=bard.get_answer(f"{a}")["content"]
+            await message.reply_text(f"{response}", parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup(X))     
+    except Exception as e:
+        await message.reply_text(f"خطأ:  {e} ")
