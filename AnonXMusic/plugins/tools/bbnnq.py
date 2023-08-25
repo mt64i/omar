@@ -1,23 +1,13 @@
 # telegram: @bbnnQ ~ My channel: @ccooR حقوق.
 import os
 import random
-import asyncio,time
-from pyrogram import Client,filters,enums
-from pyrogram.enums import ChatAction, ParseMode
+import asyncio
+from pyrogram import Client,filters
 from strings.filters import command
 from pyrogram.types import (Message,
 InlineKeyboardMarkup,InlineKeyboardButton)
-from bardapi import Bard
 from typing import Union
 from AnonXMusic import app
-
-X = [
-    [
-        InlineKeyboardButton(text="شڪࢪ لـ", url=f"https://t.me/bbnnq"),
-        
-        InlineKeyboardButton(text="أبࢪيل", url=f"https://t.me/cczza"),
-    ]
-    ]
 
 @app.on_message(command("ايما"))
 async def bottttt(client, message):
