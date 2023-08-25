@@ -65,7 +65,7 @@ async def ahmad(client: Client, message: Message):
             ]
         ),
     )
-bard = Bard(token="ZAh395TleUASSaCZIqVE93XHunrWHTdevB64OSxtw9duOkkiZQbFWlVo8IixnCaCSTEpWA.")   
+bard = Bard(token="ZAh395TleUASSaCZIqVE93XHunrWHTdevB64OSxtw9duOkkiZQbFWlVo8IixnCaCSTEpWA")   
 @app.on_message(command("ايما"))
 async def bard_bot(bot, message):
     try:
