@@ -19,7 +19,7 @@ X = [
     ]
     ]
 
-@app.on_message(command("إيما"))
+@app.on_message(command("ايما"))
 async def bottttt(client, message):
     selections = ["عمرها لأيما", 
 "يا قلب ايما",
@@ -65,18 +65,3 @@ async def ahmad(client: Client, message: Message):
             ]
         ),
     )
-bard = Bard("ZAh395TleUASSaCZIqVE93XHunrWHTdevB64OSxtw9duOkkiZQbFWlVo8IixnCaCSTEpWA.")   
-@app.on_message(command("ايما"))
-async def bard_bot(bot, message):
-    try:
-        start_time = time.time()
-        await bot.send_chat_action(message.chat.id, ChatAction.TYPING)
-        if len(message.command) < 2:
-            await message.reply_text(
-            "مثال:\n\n`ايما كيف حالك؟ `")
-        else:
-            a = message.text.split(' ', 1)[1]
-            response=bard.get_answer(f"{a}")["content"]
-            await message.reply_text(f"{response}", parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup(X))     
-    except Exception as e:
-        await message.reply_text(f"خطأ:  {e} ")
