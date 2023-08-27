@@ -5,13 +5,12 @@ from telethon.errors import UserNotParticipantError
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
-from AnonXMusic import app as client
+from AnonXMusic import app
 
 spam_chats = []
 
 
-@client.on(events.NewMessage(pattern="^تاغ للكل ?(.*)"))
-@client.on(events.NewMessage(pattern="^@all ?(.*)"))
+@app.on_message(command(["@all","تاغ للكل"])) 
 async def mentionall(event):
     chat_id = event.chat_id
     if event.is_private:
@@ -72,7 +71,7 @@ async def mentionall(event):
         pass
 
 
-@client.on(events.NewMessage(pattern="^توقف$"))
+@app.on_message(command(["الغاء التاغ","ايقاف"]))
 async def cancel_spam(event):
     if not event.chat_id in spam_chats:
         return await event.respond("لا توجد عملية للتاغ؟")
