@@ -1,5 +1,5 @@
 import asyncio
-
+from strings.filters import command
 from telethon import events
 from telethon.errors import UserNotParticipantError
 from telethon.tl.functions.channels import GetParticipantRequest
