@@ -54,7 +54,7 @@ def song(client, message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f"الأسم: {title[:25]}\nالوصف: `{duration}`\nالمشاهدات: `{views}`\nبواسطة:​ {chutiya}"
+        rep = f"الأسم: {title[:25]}\nالمدة: `{duration}`\nالمشاهدات: `{views}`\nبواسطة:​ {chutiya}"
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(dur_arr[i]) * secmul
@@ -70,7 +70,7 @@ def song(client, message):
         m.delete()
     except Exception as e:
         m.edit(
-            f"حدث خطأ اثناء التحميل » [أبࢪيل](t.me/cczza) 💕**\n\**خطأ :** {e}"
+            f"[Victorious](t.me/cczza) 💕**\n\**خطأ :** {e}"
         )
         print(e)
 
