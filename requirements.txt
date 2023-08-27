@@ -23,4 +23,3 @@ unidecode
 yt-dlp
 youtube-search
 youtube-search-python
-telethon==1.29.3
