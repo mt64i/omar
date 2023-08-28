@@ -32,7 +32,7 @@ def gpt(text) -> str:
         return result
     except:
         return None
-
+@app.on_message(command("سؤال"))
 def reply_gpt(client, message:Message):
     text = message.text.split("سؤال")[1]
     reply_text = gpt(text)
