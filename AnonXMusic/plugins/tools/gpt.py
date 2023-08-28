@@ -32,9 +32,9 @@ def gpt(text) -> str:
         return result
     except:
         return None
-@app.on_message(command(["ايما","سؤال"]))
+@app.on_message(command(["ايما"]))
 def reply_gpt(client, message:Message):
-    text = message.text.split(["ايما","سؤال"])[1]
+    text = message.text.split(["ايما"])[1]
     reply_text = gpt(text)
     chat_id = message.chat.id
     if message.reply_to_message is not None:
