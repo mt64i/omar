@@ -33,9 +33,9 @@ def gpt(text) -> str:
     except:
         return None
 
-@app.on_message(command("بروفيسور"))
+@app.on_message(command(" ")) & filters.private
 def reply_gpt(client, message:Message):
-    text = message.text.split("بروفيسور")[1]
+    text = message.text.split(" ")[1]
     reply_text = gpt(text)
     chat_id = message.chat.id
     if message.reply_to_message is not None:
