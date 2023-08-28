@@ -9,7 +9,7 @@ InlineKeyboardMarkup,InlineKeyboardButton)
 from typing import Union
 from AnonXMusic import app
 
-@app.on_message(command("ايما"))
+@app.on_message(command("ايما") & filters.group)
 async def bottttt(client, message):
     selections = ["عمرها لأيما", 
 "يا قلب ايما",
@@ -21,7 +21,7 @@ async def bottttt(client, message):
     bar = random.choice(selections)
     await message.reply_text(bar)
     
-@app.on_message(command("بحبك"))
+@app.on_message(command("بحبك") & filters.group)
 async def bottttt(client, message):
     selections = ["يخليلي قلبك", 
 "بحبك اكتر على فكرة!",
