@@ -41,9 +41,4 @@ def reply_gpt(client, message:Message):
         message_id = message.reply_to_message.id
     else:
         message_id = None
-    client.send_message(chat_id=chat_id, text=reply_text + "\n\n\n تم استخدام أحدث إصدار من الذكاء الاصطناعي 3.5 مطور من قبل @bbnnQ", reply_to_message_id=message_id)
-
-@app.on_message(command("سؤال"))
-def reply(client, message:Message):
-    message.reply_text(f"**مرحبا بك يا {message.from_user.mention}\n\n اكتب سؤالك بالكامل وسوف يتم الرد عليك فورا**")
-    reply_gpt(client, message)
+    client.send_message(chat_id=chat_id, text=reply_text, reply_to_message_id=message_id)
