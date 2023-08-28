@@ -41,4 +41,4 @@ def reply_gpt(client, message:Message):
         message_id = message.reply_to_message.id
     else:
         message_id = None
-    await message.reply_text(chat_id=chat_id, text=reply_text, reply_to_message_id=message_id)
+    client.replay_message(chat_id=chat_id, text=reply_text, reply_to_message_id=message_id)
