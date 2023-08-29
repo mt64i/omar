@@ -69,7 +69,7 @@ f"يعني هلأ أبڪي؟ {message.from_user.mention}",]
 async def ihd(client: Client, message: Message):
     rl = random.randint(3,122)
     url = f"https://t.me/EmmaBotVoice/{rl}"
-    await client.send_voice(message.chat.id,url,caption="`🧚🏼‍♂️ ¦ تم أختياࢪ أغنية لك`",
+    await client.send_voice(message.chat.id,url,caption="🧚🏼‍♂️ ¦ تم أختياࢪ أغنية لك {message.from_user.mention}",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -93,6 +93,7 @@ async def ahmad(client: Client, message: Message):
 ‹: اللغه - لتغير لغة البوت 🥀
 ‹: تسريع - لتغيير سرعة الصوت 🥀
 ‹: ايما + السؤال (فقط في الخاص) 🥀
+‹: غنيلي - سترسل لك اغنية عشوائية 🥀
 """,
         reply_markup=InlineKeyboardMarkup(
         [
