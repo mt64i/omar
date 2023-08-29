@@ -104,7 +104,7 @@ f"https://t.me/c/1892532627/37 {message.from_user.mention}",
 f"https://t.me/c/1892532627/38 {message.from_user.mention}",
 f"https://t.me/c/1892532627/39 {message.from_user.mention}",
 f"https://t.me/c/1892532627/40 {message.from_user.mention}",]
-    emm = random.choice(voice)
+    emma = random.choice(voice)
     await message.reply_voice(emma)
 
 @app.on_message(command("الاوامر"))
