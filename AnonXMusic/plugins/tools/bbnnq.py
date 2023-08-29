@@ -11,57 +11,57 @@ from AnonXMusic import app
 
 @app.on_message(command("ايما") & filters.group)
 async def bottttt(client, message):
-    selections = [f"{message.from_user.mention} عمرها لأيما", 
-f"{message.from_user.mention} يا قلب ايما",
-f"{message.from_user.mention} صرعت راسها لأيما",
-f"{message.from_user.mention} لك نعم يا عيوني",
-f"{message.from_user.mention} تؤبرني معك",
-f"{message.from_user.mention} تفضل عم أسمع واللهي نصرعت",
-f"{message.from_user.mention} أختصر ؟",]
+    selections = [f"عمرها لأيما 🤍🧚🏼‍♂️ {message.from_user.mention}", 
+f"يا قلب ايما ♥ {message.from_user.mention}",
+f"صرعت راسها لأيما 🙈 {message.from_user.mention}",
+f"لك نعم يا عيوني {message.from_user.mention}",
+f"تؤبرني معك {message.from_user.mention}",
+f"تفضل عم أسمع واللهي نصرعت 🙂 {message.from_user.mention}",
+f" أختصر ؟ 💕 {message.from_user.mention}",]
     bar = random.choice(selections)
     await message.reply_text(bar)
     
 @app.on_message(command("بحبك") & filters.group)
 async def bottttt(client, message):
-    selections = [f"{message.from_user.mention} يخليلي قلبك", 
-f"{message.from_user.mention} بحبك أڪتࢪ ؏ فڪࢪة!",
-f"{message.from_user.mention} بتنفسك",
-f"{message.from_user.mention} ياعمري انااا تعا لقلببييي",
-f"{message.from_user.mention} تفضل واطلب ايدي من @bbnnQ",
-f"{message.from_user.mention} لا اله الا الله وانا بحبك",
-f"{message.from_user.mention} خلص أستحي عيب",
-f"{message.from_user.mention} خلاص يا مز خجلت",]
+    selections = [f"يخليلي قلبك 🤍 {message.from_user.mention}", 
+f"بحبك أڪتࢪ ؏ فڪࢪة ♥! {message.from_user.mention}",
+f"بتنفسك ♥ {message.from_user.mention}",
+f"ياعمري انااا تعا لقلببييي {message.from_user.mention}",
+f"تفضل واطلب ايدي من @bbnnQ 🧚🏼‍♂️ {message.from_user.mention}",
+f"لا اله الا الله وانا بحبك 🥺 {message.from_user.mention}",
+f"خلص أستحي عيب 😒 {message.from_user.mention}",
+f"خلاص يا مز خجلت 🙂 {message.from_user.mention}",]
     bar = random.choice(selections)
     await message.reply_text(bar)
 
 @app.on_message(command(["منرتبط","نرتبط"]) & filters.group)
 async def bottttt(client, message):
-    selections = [f"{message.from_user.mention} طبعا منرتبط 🤍", 
-f"{message.from_user.mention} اي عمࢪي!",
-f"{message.from_user.mention} يلا جيب الشيخ!",
-f"{message.from_user.mention} لك بخجل بخجل",
-f"{message.from_user.mention} هه فشࢪت 🙂",
-f"{message.from_user.mention} تࢪا انا بوت!",
-f"{message.from_user.mention} بخجل وربي 🥺",
-f"{message.from_user.mention} اممممم بفڪࢪ 🥲",]
+    selections = [f"طبعا منرتبط 🤍 {message.from_user.mention}", 
+f"اي عمࢪي 🤍{message.from_user.mention}",
+f"يلا جيب الشيخ 🔥! {message.from_user.mention}",
+f"لك بخجل بخجل 🙂 {message.from_user.mention}",
+f"هه فشࢪت 🙂 {message.from_user.mention}",
+f"تࢪا انا بوت ♥! {message.from_user.mention}",
+f"بخجل وربي 🥺 {message.from_user.mention}",
+f"اممممم بفڪࢪ 🥲 {message.from_user.mention}",]
     bar = random.choice(selections)
     await message.reply_text(bar)
 @app.on_message(command(["مرحبا","هلو"]) & filters.group)
 async def bottttt(client, message):
-    selections = [f"{message.from_user.mention} هلا بريحة هلي🤍", 
-f"{message.from_user.mention} يهلا نوࢪت/ي!",
-f"{message.from_user.mention} أهلين وسهلين بالحب 🙂",
-f"{message.from_user.mention} 🔥🥀",
-f"{message.from_user.mention} شࢪفوا على هل ضيف",
-f"{message.from_user.mention} كل الهلا",
-f"{message.from_user.mention} نوࢪ الڪࢪوب 🥀",
-f"{message.from_user.mention} شعشعت يا قلب قلبي 🤍🧚🏼‍♂️",]
+    selections = [f"هلا بريحة هلي 🤍 {message.from_user.mention}", 
+f"يهلا نوࢪت/ي 🧚🏼‍♂️🤍 {message.from_user.mention}",
+f"أهلين وسهلين بالحب 🙂 {message.from_user.mention}",
+f"🔥🥀 {message.from_user.mention}",
+f"شࢪفوا على هل ضيف 😹💔 {message.from_user.mention}",
+f"كل الهلا {message.from_user.mention}",
+f"نوࢪ الڪࢪوب 🥀 {message.from_user.mention}",
+f"شعشعت يا قلب قلبي 🤍🧚🏼‍♂️ {message.from_user.mention}",]
     bar = random.choice(selections)
     await message.reply_text(bar)
 @app.on_message(command(["منتحاسب"]) & filters.group)
 async def bottttt(client, message):
-    selections = [f"{message.from_user.mention} خوفتني ترا 😔",
-f"{message.from_user.mention} اي منتحاسب هه زلمة 😂",]
+    selections = [f"خفت تࢪا 😹💔 {message.from_user.mention}",
+f"يعني هلأ أبڪي؟ {message.from_user.mention}",]
     bar = random.choice(selections)
     await message.reply_text(bar)
 @app.on_message(command("الاوامر"))
