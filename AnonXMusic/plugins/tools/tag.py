@@ -7,15 +7,14 @@ from pyrogram import filters
 from pyrogram import Client
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
 from strings.filters import command
-from AnonX import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
-from AnonX import app
+from AnonXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from asyncio import gather
 from pyrogram.errors import FloodWait
 
 
 
 
-@app.on_message(command(["المالك", "صاحب الخرابه", "المنشي"]) & filters.group)
+@app.on_message(command(["اونير"]) & filters.group)
 async def gak_owne(client: Client, message: Message):
       if len(message.command) >= 2:
          return 
@@ -36,13 +35,7 @@ async def gak_owne(client: Client, message: Message):
                     
    
 
-   
-@app.on_message(command(["اسمي", "اسمي اي"]) & filters.group )
-async def vgdg(client: Client, message: Message):
-    await message.reply_text(
-        f"""❤️‍🔥 اسمك »»  {message.from_user.mention()}""") 
-
-        
+       
 
 array = []
 @app.on_message(command(["@all", "تاك","تاك للكل"]) & ~filters.private)
