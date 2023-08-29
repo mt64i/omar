@@ -67,7 +67,7 @@ f"يعني هلأ أبڪي؟ {message.from_user.mention}",]
 
 @app.on_message(command(["غنيلي"]) & filters.group)
 async def bottttt(client: Client, message: Message):
-    selections = [f"https://t.me/c/1892532627/3 {message.from_user.mention}", 
+    voice = [f"https://t.me/c/1892532627/3 {message.from_user.mention}", 
 f"https://t.me/c/1892532627/4 {message.from_user.mention}",
 f"https://t.me/c/1892532627/5 {message.from_user.mention}",
 f"https://t.me/c/1892532627/6 {message.from_user.mention}",
@@ -104,8 +104,8 @@ f"https://t.me/c/1892532627/37 {message.from_user.mention}",
 f"https://t.me/c/1892532627/38 {message.from_user.mention}",
 f"https://t.me/c/1892532627/39 {message.from_user.mention}",
 f"https://t.me/c/1892532627/40 {message.from_user.mention}",]
-    bar = random.choice(selections)
-    client.send_voice(bar)
+    emm = random.choice(voice)
+    await message.reply_voice(emma)
 
 @app.on_message(command("الاوامر"))
 async def ahmad(client: Client, message: Message):
