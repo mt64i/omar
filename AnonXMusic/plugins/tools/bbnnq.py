@@ -64,6 +64,49 @@ async def bottttt(client, message):
 f"يعني هلأ أبڪي؟ {message.from_user.mention}",]
     bar = random.choice(selections)
     await message.reply_text(bar)
+
+@app.on_message(command(["غنيلي"]) & filters.group)
+async def bottttt(client, message):
+    selections = [f"https://t.me/c/1892532627/3 {message.from_user.mention}", 
+f"https://t.me/c/1892532627/4 {message.from_user.mention}",
+f"https://t.me/c/1892532627/5 {message.from_user.mention}",
+f"https://t.me/c/1892532627/6 {message.from_user.mention}",
+f"https://t.me/c/1892532627/7 {message.from_user.mention}",
+f"https://t.me/c/1892532627/9 {message.from_user.mention}",
+f"https://t.me/c/1892532627/10 {message.from_user.mention}",
+f"https://t.me/c/1892532627/11 {message.from_user.mention}",
+f"https://t.me/c/1892532627/12 {message.from_user.mention}",
+f"https://t.me/c/1892532627/13 {message.from_user.mention}",
+f"https://t.me/c/1892532627/14 {message.from_user.mention}",
+f"https://t.me/c/1892532627/15 {message.from_user.mention}",
+f"https://t.me/c/1892532627/16 {message.from_user.mention}",
+f"https://t.me/c/1892532627/17 {message.from_user.mention}",
+f"https://t.me/c/1892532627/18 {message.from_user.mention}",
+f"https://t.me/c/1892532627/19 {message.from_user.mention}",
+f"https://t.me/c/1892532627/20 {message.from_user.mention}",
+f"https://t.me/c/1892532627/21 {message.from_user.mention}",
+f"https://t.me/c/1892532627/22 {message.from_user.mention}",
+f"https://t.me/c/1892532627/23 {message.from_user.mention}",
+f"https://t.me/c/1892532627/24 {message.from_user.mention}",
+f"https://t.me/c/1892532627/25 {message.from_user.mention}",
+f"https://t.me/c/1892532627/26 {message.from_user.mention}",
+f"https://t.me/c/1892532627/27 {message.from_user.mention}",
+f"https://t.me/c/1892532627/28 {message.from_user.mention}",
+f"https://t.me/c/1892532627/29 {message.from_user.mention}",
+f"https://t.me/c/1892532627/30 {message.from_user.mention}",
+f"https://t.me/c/1892532627/31 {message.from_user.mention}",
+f"https://t.me/c/1892532627/32 {message.from_user.mention}",
+f"https://t.me/c/1892532627/33 {message.from_user.mention}",
+f"https://t.me/c/1892532627/34 {message.from_user.mention}",
+f"https://t.me/c/1892532627/35 {message.from_user.mention}",
+f"https://t.me/c/1892532627/36 {message.from_user.mention}",
+f"https://t.me/c/1892532627/37 {message.from_user.mention}",
+f"https://t.me/c/1892532627/38 {message.from_user.mention}",
+f"https://t.me/c/1892532627/39 {message.from_user.mention}",
+f"https://t.me/c/1892532627/40 {message.from_user.mention}",]
+    bar = random.choice(selections)
+    await message.reply_song(bar)
+
 @app.on_message(command("الاوامر"))
 async def ahmad(client: Client, message: Message):
     await message.reply_text(f"""🧚🏼‍♂️🔥 أوامࢪ بوت إيما 🧚🏼‍♂️🔥:
