@@ -44,7 +44,7 @@ def song(client, message):
 
     except Exception as e:
         m.edit(
-            "لم يتم العثوࢪ على الأغنية أو الفيديو.\n\nحاول مرة أخࢪى..!"
+            "لم يتم العثوࢪ على الأغنية حاول مرة أخࢪى!"
         )
         print(str(e))
         return
@@ -54,7 +54,7 @@ def song(client, message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f"الأسم: {title[:25]}\nالمدة: `{duration}`\nالمشاهدات: `{views}`\nبواسطة:​ {chutiya}"
+        rep = f"الأسم: {title[:25]}\nالمدة: {duration}\nالمشاهدات: {views}\nبواسطة:​ {chutiya}"
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(dur_arr[i]) * secmul
