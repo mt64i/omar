@@ -65,47 +65,20 @@ f"يعني هلأ أبڪي؟ {message.from_user.mention}",]
     bar = random.choice(selections)
     await message.reply_text(bar)
 
-@app.on_message(command(["غنيلي"]) & filters.group)
-async def bottttt(client: Client, message: Message):
-    voice = [f"https://t.me/c/1892532627/3 {message.from_user.mention}", 
-f"https://t.me/EmmaBotVoice/4 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/5 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/6 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/7 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/9 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/10 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/11 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/12 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/13 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/14 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/15 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/16 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/17 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/18 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/19 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/20 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/21 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/22 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/23 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/24 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/25 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/26 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/27 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/28 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/29 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/30 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/31 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/32 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/33 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/34 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/35 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/36 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/37 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/38 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/39 {message.from_user.mention}",
-f"https://t.me/EmmaBotVoice/40 {message.from_user.mention}",]
-    emma = random.choice(voice)
-    await message.reply_voice(emma)
+@app.on_message(command([f"غنيلي"]))
+async def ihd(client: Client, message: Message):
+    rl = random.randint(3,122)
+    url = f"https://t.me/EmmaBotVoice/{rl}"
+    await client.send_voice(message.chat.id,url,caption="`🧚🏼‍♂️ ¦ تم أختياࢪ أغنية لك`",
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        message.from_user.first_name, url=f"https://t.me/{message.from_user.username}")
+                ],
+            ]
+        )
+    )
 
 @app.on_message(command("الاوامر"))
 async def ahmad(client: Client, message: Message):
