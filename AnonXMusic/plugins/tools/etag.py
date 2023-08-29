@@ -7,15 +7,14 @@ from pyrogram import filters
 from pyrogram import Client
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
 from strings.filters import command
-from AnonX import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
-from AnonX import app
+from AnonXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from asyncio import gather
 from pyrogram.errors import FloodWait
 
 
 
 
-@app.on_message(command(["المالك", "صاحب الخرابه", "المنشي"]) & filters.group)
+@app.on_message(command(["اونير"]) & filters.group)
 async def gak_owne(client: Client, message: Message):
       if len(message.command) >= 2:
          return 
@@ -35,13 +34,6 @@ async def gak_owne(client: Client, message: Message):
                     
                     
    
-
-   
-@app.on_message(command(["اسمي", "اسمي اي"]) & filters.group )
-async def vgdg(client: Client, message: Message):
-    await message.reply_text(
-        f"""❤️‍🔥 اسمك »»  {message.from_user.mention()}""") 
-
         
 
 array = []
@@ -51,9 +43,9 @@ async def nummmm(client: app, message):
      return await message.reply_text("**التاك قيد التشغيل حالياً ،**")
   chek = await client.get_chat_member(message.chat.id, message.from_user.id)
   if not chek.status in ["administrator", "creator"]:
-    await message.reply("**يجب انت تكون مشرف لاستخدام الامر 🖱️**")
+    await message.reply("**آسفة، الأمࢪ بس للمشࢪفين!**")
     return
-  await message.reply_text("**جاري بدأ المنشن ، لايقاف الامر اضغط **\n /cancel او اكتب بس منشن")
+  await message.reply_text("*جاࢪِ بدأ المنشن لإيقافه أࢪسل ايقاف او /stag*")
   i = 0
   txt = ""
   zz = message.text
@@ -71,7 +63,7 @@ async def nummmm(client: app, message):
         return
       if not x.user.is_deleted:
        i += 1
-       txt += f" {x.user.mention} ،"
+       txt += f" {x.user.mention}"
        if i == 5:
         try:
               if not message.photo:
@@ -91,11 +83,11 @@ async def nummmm(client: app, message):
   array.remove(message.chat.id)
 
 
-@app.on_message(command(["بس المنشن", "/cancel","بس منشن"]))
+@app.on_message(command(["ايقاف","/stag"]))
 async def stop(client, message):
   chek = await client.get_chat_member(message.chat.id, message.from_user.id)
   if not chek.status in ["administrator", "creator"]:
-    await message.reply("**يجب انت تكون مشرف لاستخدام الامر 🖱️")
+    await message.reply("آسفة، الأمࢪ بس للمشࢪفين!")
     return
   if message.chat.id not in array:
      await message.reply("**المنشن متوقف بالفعل**")
