@@ -66,7 +66,7 @@ f"يعني هلأ أبڪي؟ {message.from_user.mention}",]
     await message.reply_text(bar)
 
 @app.on_message(command(["غنيلي"]) & filters.group)
-async def bottttt(client, message):
+async def bottttt(client: Client, message: Message):
     selections = [f"https://t.me/c/1892532627/3 {message.from_user.mention}", 
 f"https://t.me/c/1892532627/4 {message.from_user.mention}",
 f"https://t.me/c/1892532627/5 {message.from_user.mention}",
