@@ -12,7 +12,7 @@ from AnonXMusic import app
 @app.on_message(command("ايما") & filters.group)
 async def bottttt(client, message):
     selections = [f"{message.from_user.mention} عمرها لأيما", 
-f"{message.from_user.mention} يا قلب ايمت",
+f"{message.from_user.mention} يا قلب ايما",
 f"{message.from_user.mention} صرعت راسها لأيما",
 f"{message.from_user.mention} لك نعم يا عيوني",
 f"{message.from_user.mention} تؤبرني معك",
