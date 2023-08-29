@@ -105,7 +105,7 @@ f"https://t.me/c/1892532627/38 {message.from_user.mention}",
 f"https://t.me/c/1892532627/39 {message.from_user.mention}",
 f"https://t.me/c/1892532627/40 {message.from_user.mention}",]
     bar = random.choice(selections)
-    await message.reply_song(bar)
+    await message.reply_voice(bar)
 
 @app.on_message(command("الاوامر"))
 async def ahmad(client: Client, message: Message):
