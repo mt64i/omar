@@ -72,11 +72,7 @@ def AdminRightsCheck(mystic):
                     if message.from_user.id not in admins:
                         if await is_skipmode(message.chat.id):
                             upvote = await get_upvote_count(chat_id)
-                            text = f"""<b>هذا الأمࢪ للآدمن ففط</b>
-
-اذا ڪنت آدمن أࢪسل : /reload
-
-{upvote} أو أحصل على تصويت من الآدمن"""
+                            text = f"هذا الأمࢪ فقط للمشࢪفين!\nاذا ڪنت مشࢪف أرسل /reload\nوأن لم تڪن مشࢪف يجب أن تحصل على {upvote} هذا العدد من التصويت من المشࢪفين"""
 
                             command = message.command[0]
                             if command[0] == "c":
@@ -88,7 +84,7 @@ def AdminRightsCheck(mystic):
                                 [
                                     [
                                         InlineKeyboardButton(
-                                            text="ᴠᴏᴛᴇ",
+                                            text="تصويت",
                                             callback_data=f"ADMIN  UpVote|{chat_id}_{MODE}",
                                         ),
                                     ]
@@ -139,7 +135,7 @@ def AdminActual(mystic):
                 [
                     [
                         InlineKeyboardButton(
-                            text="ʜᴏᴡ ᴛᴏ ғɪx ?",
+                            text="انت مشࢪف مجهول ?",
                             callback_data="AnonymousAdmin",
                         ),
                     ]
