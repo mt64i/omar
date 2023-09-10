@@ -9,11 +9,11 @@ InlineKeyboardMarkup,InlineKeyboardButton)
 from typing import Union
 from AnonXMusic import app
 
-@app.on_message(command("ايما") & filters.group)
+@app.on_message(command("ليلى") & filters.group)
 async def bottttt(client, message):
-    selections = [f"عمرها لأيما 🤍🧚🏼‍♂️ {message.from_user.mention}", 
-f"يا قلب ايما ♥ {message.from_user.mention}",
-f"صرعت راسها لأيما 🙈 {message.from_user.mention}",
+    selections = [f"عمرها لليلى 🤍🧚🏼‍♂️ {message.from_user.mention}", 
+f"يا قلب ليلى ♥ {message.from_user.mention}",
+f"صرعت راسها لليلى 🙈 {message.from_user.mention}",
 f"لك نعم يا عيوني {message.from_user.mention}",
 f"تؤبرني معك {message.from_user.mention}",
 f"تفضل عم أسمع واللهي نصرعت 🙂 {message.from_user.mention}",
@@ -82,7 +82,7 @@ async def ihd(client: Client, message: Message):
 
 @app.on_message(command("الاوامر"))
 async def ahmad(client: Client, message: Message):
-    await message.reply_text(f"""🧚🏼‍♂️🔥 أوامࢪ بوت إيما 🧚🏼‍♂️🔥:
+    await message.reply_text(f"""🧚🏼‍♂️🔥 أوامࢪ بوت ليلى 🧚🏼‍♂️🔥:
 
 ‹: تشغيل - لتشغيل أغنية 🥀
 ‹: تخطي - لتخطي الأغنية 🥀
@@ -92,25 +92,24 @@ async def ahmad(client: Client, message: Message):
 ‹: تكميل - لتكميل الاغنية المتوقفة 🥀
 ‹: اللغه - لتغير لغة البوت 🥀
 ‹: تسريع - لتغيير سرعة الصوت 🥀
-‹: ايما + السؤال (فقط في الخاص) 🥀
 ‹: غنيلي - سترسل لك اغنية عشوائية 🥀
 """,
         reply_markup=InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("‹ اضافة الى مجموعة ›", url=f"https://t.me/EmCaMusicBot?startgroup=true"),
+                InlineKeyboardButton("‹ اضافة الى مجموعة ›", url=f"https://t.me/R_366bot?startgroup=true"),
             ],
             ]
         ),
     )
 @app.on_message(command(["المطور","المبرمج","السورس"]))
 async def ahmad(client: Client, message: Message):
-    await message.reply_text(f"- 𝐖ᴇʟᴄᴏᴍᴇ 𝐓ᴏ 𝐒ᴏụʀᴄᴇ 𝐄ᴍᴍᴀ 🥀\n- 𝐒ᴏụʀᴄᴇ 𝐃ᴇᴠᴇʟᴏᴘᴇʀ: @bbnnQ 🧑‍💻",
+    await message.reply_text(f"- 𝐖ᴇʟᴄᴏᴍᴇ 𝐓ᴏ 𝐒ᴏụʀᴄᴇ 𝐄ᴍᴍᴀ 🥀\n- 𝐒ᴏụʀᴄᴇ 𝐃ᴇᴠᴇʟᴏᴘᴇʀ: @z_z_a 🧑‍💻",
         reply_markup=InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("𝐃ᴇᴠᴇʟᴏᴘᴇʀ", user_id=5866649827),
-                InlineKeyboardButton("𝐒ᴏụʀᴄᴇ", url="t.me/cczza"),
+                InlineKeyboardButton("𝐃ᴇᴠᴇʟᴏᴘᴇʀ", user_id=882710752),
+                InlineKeyboardButton("لتنصيب بوت", url="t.me/bbnnq"),
             ],
             ]
         ),
