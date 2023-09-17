@@ -109,7 +109,7 @@ async def ahmad(client: Client, message: Message):
         [
             [
                 InlineKeyboardButton("𝐃ᴇᴠᴇʟᴏᴘᴇʀ", user_id=882710752),
-                InlineKeyboardButton("لتنصيب بوت", url="t.me/bbnnq"),
+                InlineKeyboardButton("قناة البوت", url="https://t.me/Z_c_K"),
             ],
             ]
         ),
