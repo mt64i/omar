@@ -10,7 +10,6 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from config import BANNED_USERS, lyrical
-from strings import get_command
 from strings.filters import command
 from AnonXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram,
                         YouTube, app)
