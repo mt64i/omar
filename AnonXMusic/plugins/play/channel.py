@@ -13,7 +13,7 @@ from config import BANNED_USERS
     & filters.group 
     & ~BANNED_USERS
 )
-@app.on_message(command(["ربط"])
+@app.on_message(command(["ربط",])
     & filters.group
     & ~BANNED_USERS
 )
