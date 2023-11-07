@@ -1,13 +1,10 @@
 import random
 import string
-from ast import ExceptHandler
 from pyrogram import filters
-from pyrogram.types import (InlineKeyboardMarkup, InputMediaPhoto,
-                            Message,InlineKeyboardButton)
+from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-import requests
 from strings.filters import command
 from AnonXMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
 from AnonXMusic.core.call import Anony
@@ -26,24 +23,6 @@ from AnonXMusic.utils.inline import (
 from AnonXMusic.utils.logger import play_logs
 from AnonXMusic.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical
-
-force_btn = InlineKeyboardMarkup(
-    [
-        [
-            InlineKeyboardButton(   
-              text=f"اضغط للاشتراك", url=f"https://t.me/zzsvv",)                        
-        ],        
-    ]
-)
-async def check_is_joined(message, Message, client):    
-    try:
-        userid = message.from_user.id
-        user_name = message.from_user.first_name
-        status = await app.get_chat_member("zzsvv", userid)
-        return True
-    except Exception:
-        await message.reply_text(f'⌯︙عذࢪاَ عزيزي ↫ {user_name} \n⌯︙عـليك الاشـتࢪاك في قنـاة البـوت اولآ\nꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ',reply_markup=force_btn,parse_mode="markdown",disable_web_page_preview=False)
-        return False
 
 
 @app.on_message(command(["شغل","تشغيل",])
