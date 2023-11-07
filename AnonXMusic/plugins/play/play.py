@@ -30,7 +30,7 @@ force_btn = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(   
-              text=f"• 𝐂𝐇𝐀𝐙𝐀𝐋 • 𝐓𝐕", url=f"t.me/CHAZA_L",)                        
+              text=f"برود .", url=f"t.me/zzsvv",)                        
         ],        
     ]
 )
@@ -38,14 +38,14 @@ async def check_is_joined(message):
     try:
         userid = message.from_user.id
         user_name = message.from_user.first_name
-        status = await app.get_chat_member("CHAZA_L", userid)
+        status = await app.get_chat_member("zzsvv", userid)
         return True
     except Exception:
-        await message.reply_text(f'🚧┇عزيزي: {message.from_user.mention}\n🚧┇أشتࢪك في قناة البوت أولاً.\n🚧┇قناة البوت: @CHAZA_L 🧚‍♀',reply_markup=force_btn,disable_web_page_preview=False)
+        await message.reply_text(f'🚧┇عزيزي: {message.from_user.mention}\n🚧┇أشتࢪك في قناة البوت أولاً.\n🚧┇قناة البوت: @zzsvv 🫂🫀',reply_markup=force_btn,disable_web_page_preview=False)
         return False
 
 
-@app.on_message(command(["تشغيل"])
+@app.on_message(command(["شغل","تشغيل"])
     & filters.group
     & ~BANNED_USERS
 )
