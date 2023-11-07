@@ -1,3 +1,4 @@
+from  pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import random
 import string
 from ast import ExceptHandler
