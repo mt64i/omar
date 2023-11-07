@@ -9,62 +9,6 @@ InlineKeyboardMarkup,InlineKeyboardButton)
 from typing import Union
 from AnonXMusic import app
 
-@app.on_message(command("ليلى") & filters.group)
-async def bottttt(client, message):
-    selections = [f"عمرها لليلى 🤍🧚🏼‍♂️ {message.from_user.mention}", 
-f"يا قلب ليلى ♥ {message.from_user.mention}",
-f"صرعت راسها لليلى 🙈 {message.from_user.mention}",
-f"لك نعم يا عيوني {message.from_user.mention}",
-f"تؤبرني معك {message.from_user.mention}",
-f"تفضل عم أسمع واللهي نصرعت 🙂 {message.from_user.mention}",
-f" أختصر ؟ 💕 {message.from_user.mention}",]
-    bar = random.choice(selections)
-    await message.reply_text(bar)
-    
-@app.on_message(command("بحبك") & filters.group)
-async def bottttt(client, message):
-    selections = [f"يخليلي قلبك 🤍 {message.from_user.mention}", 
-f"بحبك أڪتࢪ ؏ فڪࢪة ♥! {message.from_user.mention}",
-f"بتنفسك ♥ {message.from_user.mention}",
-f"ياعمري انااا تعا لقلببييي {message.from_user.mention}",
-f"تفضل واطلب ايدي من @bbnnQ 🧚🏼‍♂️ {message.from_user.mention}",
-f"لا اله الا الله وانا بحبك 🥺 {message.from_user.mention}",
-f"خلص أستحي عيب 😒 {message.from_user.mention}",
-f"خلاص يا مز خجلت 🙂 {message.from_user.mention}",]
-    bar = random.choice(selections)
-    await message.reply_text(bar)
-
-@app.on_message(command(["منرتبط","نرتبط"]) & filters.group)
-async def bottttt(client, message):
-    selections = [f"طبعا منرتبط 🤍 {message.from_user.mention}", 
-f"اي عمࢪي 🤍{message.from_user.mention}",
-f"يلا جيب الشيخ 🔥! {message.from_user.mention}",
-f"لك بخجل بخجل 🙂 {message.from_user.mention}",
-f"هه فشࢪت 🙂 {message.from_user.mention}",
-f"تࢪا انا بوت ♥! {message.from_user.mention}",
-f"بخجل وربي 🥺 {message.from_user.mention}",
-f"اممممم بفڪࢪ 🥲 {message.from_user.mention}",]
-    bar = random.choice(selections)
-    await message.reply_text(bar)
-@app.on_message(command(["مرحبا","هلو"]) & filters.group)
-async def bottttt(client, message):
-    selections = [f"هلا بريحة هلي 🤍 {message.from_user.mention}", 
-f"يهلا نوࢪت/ي 🧚🏼‍♂️🤍 {message.from_user.mention}",
-f"أهلين وسهلين بالحب 🙂 {message.from_user.mention}",
-f"🔥🥀 {message.from_user.mention}",
-f"شࢪفوا على هل ضيف 😹💔 {message.from_user.mention}",
-f"كل الهلا {message.from_user.mention}",
-f"نوࢪ الڪࢪوب 🥀 {message.from_user.mention}",
-f"شعشعت يا قلب قلبي 🤍🧚🏼‍♂️ {message.from_user.mention}",]
-    bar = random.choice(selections)
-    await message.reply_text(bar)
-@app.on_message(command(["منتحاسب"]) & filters.group)
-async def bottttt(client, message):
-    selections = [f"خفت تࢪا 😹💔 {message.from_user.mention}",
-f"يعني هلأ أبڪي؟ {message.from_user.mention}",]
-    bar = random.choice(selections)
-    await message.reply_text(bar)
-
 @app.on_message(command([f"غنيلي"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(3,122)
