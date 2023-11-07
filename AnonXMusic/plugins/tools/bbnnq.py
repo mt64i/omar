@@ -82,7 +82,7 @@ async def ihd(client: Client, message: Message):
 
 @app.on_message(command("الاوامر"))
 async def ahmad(client: Client, message: Message):
-    await message.reply_text(f"""🧚🏼‍♂️🔥 أوامࢪ بوت ليلى 🧚🏼‍♂️🔥:
+    await message.reply_text(f"""🧚🏼‍♂️🔥 أوامࢪ بوت ميوزك 🧚🏼‍♂️🔥:
 
 ‹: تشغيل - لتشغيل أغنية 🥀
 ‹: تخطي - لتخطي الأغنية 🥀
@@ -97,19 +97,19 @@ async def ahmad(client: Client, message: Message):
         reply_markup=InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("‹ اضافة الى مجموعة ›", url=f"https://t.me/R_366bot?startgroup=true"),
+                InlineKeyboardButton("‹ اضافة الى مجموعة ›", url=f"https://t.me/ZXXCAQPBOT?startgroup=true"),
             ],
             ]
         ),
     )
 @app.on_message(command(["المطور","المبرمج","السورس"]))
 async def ahmad(client: Client, message: Message):
-    await message.reply_text(f"- 𝐖ᴇʟᴄᴏᴍᴇ 𝐓ᴏ 𝐒ᴏụʀᴄᴇ 𝐄ᴍᴍᴀ 🥀\n- 𝐒ᴏụʀᴄᴇ 𝐃ᴇᴠᴇʟᴏᴘᴇʀ: @z_z_a 🧑‍💻",
+    await message.reply_text(f"- 𝐒ᴏụʀᴄᴇ 𝐃ᴇᴠᴇʟᴏᴘᴇʀ: @AAAQQQ 🧑‍💻",
         reply_markup=InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("𝐃ᴇᴠᴇʟᴏᴘᴇʀ", user_id=882710752),
-                InlineKeyboardButton("قناة البوت", url="https://t.me/Z_c_K"),
+                InlineKeyboardButton("𝐃ᴇᴠᴇʟᴏᴘᴇʀ", user_id=5338950085),
+                InlineKeyboardButton("قناة البوت", url="https://t.me/zzsvv"),
             ],
             ]
         ),
