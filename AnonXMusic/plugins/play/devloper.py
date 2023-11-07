@@ -3,15 +3,15 @@ from pyrogram import Client, filters
 from strings import get_command
 from strings.filters import command
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-from YukkiMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from AnonXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from typing import Union
 from pyrogram.types import InlineKeyboardButton
 
 from config import GITHUB_REPO, SUPPORT_CHANNEL, SUPPORT_GROUP, OWNER_ID
-from YukkiMusic import app
+from AnonXMusic import app
 from config import BANNED_USERS, MUSIC_BOT_NAME
-from YukkiMusic.misc import SUDOERS
-from YukkiMusic.utils.decorators import AdminRightsCheck
+from AnonXMusic.misc import SUDOERS
+from AnonXMusic.utils.decorators import AdminRightsCheck
 
 import re
 import sys
