@@ -24,17 +24,17 @@
       },
       "BOT_TOKEN": {
         "description": "A Bot's token from Botfather",
-        "value": "5739175556:AAGatyx4lmmjX2mOYtGNIs6PSASjjWiNE3o",
+        "value": "5739175",
         "required": true
       },
       "MONGO_DB_URI": {
         "description": "Get a mongodb url from https://cloud.mongodb.com.",
-        "value": "mongodb+srv://Lizbot:abdulhadi31@cluster0.nzznuzq.mongodb.net/?retryWrites=true&w=majority",
+        "value": "mongodb+srv://Lizbo/?retryWrites=true&w=majority",
         "required": true
       },
       "GIT_TOKEN":{
         "description": "",
-        "value": "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",
+        "value": "ghp_CMF4si",
         "required": false
       },  
       "OWNER_ID": {
@@ -44,7 +44,7 @@
       },
       "STRING_SESSION": {
         "description": "A Pyrogram v2 String Session from @StringFatherBot on Telegram.",
-        "value": "BAAhIHQAc2suPdIUW9vWfprZ7iIvzELvFEgx9Iy791BsGjpbPKynzLsiM0aOvMUoaqwbVC-JUVhGCF4NtTxb04ucZ3-VbGx_4X-spMyRjmn_y6vHNhpOXWL9liQ2nQ32LeRGMNAq7pnk5kdQL-gQSF4if9sZ1hZccXhqYRQ8wBTw-1ZXogrqyAJ6PwGLB-oGrchQ3meWZbDt25UWhHgHWkTwM7vlrZxIUoXwlKxHrAXoogrlGLjUgtSgFSyOQAVfz6gIduB7SlS32RDDJEg2IFd0oQ7BL0AFIYomxuQk2e1jPss-6utTjF2JFGPQFSE2UTFImD0MAa6BxK0PYkjhidVu0NNEzQAAAAEyZYCOAA",
+        "value": "-JUVhGCF4NtTxb04uc-1ZXogrqyAJ6PwGLB--",
         "required": true
       },
       "HEROKU_API_KEY": {
@@ -59,7 +59,7 @@
       },
       "LOGGER_ID": {
         "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Channel ki id mat daal dena bsdk.",
-        "value": "-1002115752429",
+        "value": "",
         "required": true
       }
     },
