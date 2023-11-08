@@ -1,12 +1,10 @@
 import random
 import string
-from ast import ExceptHandler
-from pyrogram import filters, Client
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto, Message
+from pyrogram import filters
+from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from config import BOT_TOKEN
 from strings.filters import command
 from AnonXMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
 from AnonXMusic.core.call import Anony
@@ -26,27 +24,8 @@ from AnonXMusic.utils.logger import play_logs
 from AnonXMusic.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical
 
-force_btn = InlineKeyboardMarkup(
-    [
-        [
-            InlineKeyboardButton(   
-              text=f"• 𝐂𝐇𝐀𝐙𝐀𝐋 • 𝐓𝐕", url=f"t.me/CHAZA_L",)                        
-        ],        
-    ]
-)
-async def check_is_joined(message):    
-    try:
-        userid = message.from_user.id
-        user_name = message.from_user.first_name
-        status = await app.get_chat_member("CHAZA_L", userid)
-        return True
-    except Exception:
-        await message.reply_text(f'🚧┇عزيزي: {message.from_user.mention}\n🚧┇أشتࢪك في قناة البوت أولاً.\n🚧┇قناة البوت: @CHAZA_L 🧚‍♀',reply_markup=force_btn,disable_web_page_preview=False)
-        return False
 
-
-@app.on_message(command(["تشغيل"])
-    & filters.group
+@app.on_message(command(["تشغيل",])
     & ~BANNED_USERS
 )
 @app.on_message(filters.command(["play","vplay","cplay","cvplay",
@@ -54,7 +33,6 @@ async def check_is_joined(message):
             "vplayforce",
             "cplayforce",
             "cvplayforce",])
-    & filters.group
     & ~BANNED_USERS
 )
 @PlayWrapper
@@ -69,8 +47,6 @@ async def play_commnd(
     url,
     fplay,
 ):
-    if not await check_is_joined(message):
-        return
     mystic = await message.reply_text(
         _["play_2"].format(channel) if channel else _["play_1"]
     )
@@ -78,8 +54,8 @@ async def play_commnd(
     slider = None
     plist_type = None
     spotify = None
-    user_id = message.from_user.id
-    user_name = message.from_user.first_name
+    user_id = message.from_user.id or message.chat.id
+    user_name = message.from_user.first_name or message.chat.title
     audio_telegram = (
         (message.reply_to_message.audio or message.reply_to_message.voice)
         if message.reply_to_message
