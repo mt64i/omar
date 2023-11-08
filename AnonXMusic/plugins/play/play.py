@@ -24,6 +24,23 @@ from AnonXMusic.utils.logger import play_logs
 from AnonXMusic.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical
 
+force_btn = InlineKeyboardMarkup(
+    [
+        [
+            InlineKeyboardButton(   
+              text=f"اصغط للأشتراك", url=f"t.me/zzsvv",)                        
+        ],        
+    ]
+)
+async def check_is_joined(message):    
+    try:
+        userid = message.from_user.id
+        user_name = message.from_user.first_name
+        status = await app.get_chat_member("zzsvv", userid)
+        return True
+    except Exception:
+        await message.reply_text(f'❤️‍🩹┇عزيزي: {message.from_user.mention}\n😩┇أشتࢪك في قناة البوت أولاً.\n🚧┇قناة البوت: @zzsvv 🫂',reply_markup=force_btn,disable_web_page_preview=False)
+        return False
 
 @app.on_message(command(["شغل","تشغيل",])
     & filters.group
