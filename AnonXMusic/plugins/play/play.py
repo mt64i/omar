@@ -30,7 +30,7 @@ force_btn = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(   
-              text=f"اضغط للشتراك .", url=f"t.me/zzsvv",)                        
+              text=f"اضغط للأشتراك .", url=f"t.me/zzsvv",)                        
         ],        
     ]
 )
