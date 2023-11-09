@@ -52,7 +52,7 @@ async def ahmad(client: Client, message: Message):
         reply_markup=InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("𝐃ᴇᴠᴇʟᴏᴘᴇʀ", user_id=5338950085),
+                InlineKeyboardButton("𝘼𝙗𝙙𝙪𝙡𝙝𝙖𝙙𝙞", user_id=5338950085),
                 InlineKeyboardButton("برود .", user_id=1740893389),
             ],
             ]
