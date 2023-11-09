@@ -46,14 +46,14 @@ async def ahmad(client: Client, message: Message):
             ]
         ),
     )
-@app.on_message(command(["تنيكهواتيهن"]))
+@app.on_message(command(["مطور","السورس","سورس","المطور"]))
 async def ahmad(client: Client, message: Message):
     await message.reply_text(f"- 𝐒ᴏụʀᴄᴇ 𝐃ᴇᴠᴇʟᴏᴘᴇʀ: @AAAQQQ 🧑‍💻",
         reply_markup=InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton("𝐃ᴇᴠᴇʟᴏᴘᴇʀ", user_id=5338950085),
-                InlineKeyboardButton("قناة البوت", url="https://t.me/zzsvv"),
+                InlineKeyboardButton("برود .", user_id=1740893389),
             ],
             ]
         ),
