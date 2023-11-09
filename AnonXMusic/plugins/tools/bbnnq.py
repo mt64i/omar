@@ -41,7 +41,7 @@ async def ahmad(client: Client, message: Message):
         reply_markup=InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("‹ اضافة الى مجموعة ›", url=f"https://t.me/ZXXCAQPBOT?startgroup=true"),
+                InlineKeyboardButton("‹ اضفني الى مجموعتك ›", url=f"https://t.me/ZXXCAQPBOT?startgroup=true"),
             ],
             ]
         ),
@@ -53,7 +53,7 @@ async def ahmad(client: Client, message: Message):
         [
             [
                 InlineKeyboardButton("𝘼𝙗𝙙𝙪𝙡𝙝𝙖𝙙𝙞", user_id=5338950085),
-                InlineKeyboardButton("برود .", user_id=1740893389),
+                InlineKeyboardButton("برود .", url="https://t.me/zzsvv"),
             ],
             ]
         ),
