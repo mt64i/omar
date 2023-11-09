@@ -47,6 +47,11 @@
         "value": "BAAhIHQAc2suPdIUW9vWfprZ7iIvzELvFEgx9Iy791BsGjpbPKynzLsiM0aOvMUoaqwbVC-JUVhGCF4NtTxb04ucZ3-VbGx_4X-spMyRjmn_y6vHNhpOXWL9liQ2nQ32LeRGMNAq7pnk5kdQL-gQSF4if9sZ1hZccXhqYRQ8wBTw-1ZXogrqyAJ6PwGLB-oGrchQ3meWZbDt25UWhHgHWkTwM7vlrZxIUoXwlKxHrAXoogrlGLjUgtSgFSyOQAVfz6gIduB7SlS32RDDJEg2IFd0oQ7BL0AFIYomxuQk2e1jPss-6utTjF2JFGPQFSE2UTFImD0MAa6BxK0PYkjhidVu0NNEzQAAAAEyZYCOAA",
         "required": true
       },
+      "STRING_SESSION2": {
+        "description": "A Pyrogram v2 String Session from @StringFatherBot on Telegram.",
+        "value": "",
+        "required": falsa
+      },
       "HEROKU_API_KEY": {
         "description": "Your Heroku account's API key",
         "value": "4cf89a59-38be-4fc5-bc55-f096d1dd46b7",
