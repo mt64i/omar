@@ -14,7 +14,7 @@ from config import BANNED_USERS
     filters.command(["end", "stop", "cend", "cstop"]) & filters.group & ~BANNED_USERS
 )
 @app.on_message(
-    command(["انهاء","ايقاف"]) & filters.group & ~BANNED_USERS
+    command(["انهاء"]) & filters.group & ~BANNED_USERS
 )
 @AdminRightsCheck
 async def stop_music(cli, message: Message, _, chat_id):
@@ -29,12 +29,32 @@ async def stop_music(cli, message: Message, _, chat_id):
 
 
 @app.on_message(
-    filters.command(["end", "stop", "cend", "cstop"]) & filters.channel & ~BANNED_USERS
+    filters.command(["end", "stop", "cend", "cstop"]) & filters.group & ~BANNED_USERS
 )
 @app.on_message(
-    command(["انهاء","ايقاف"]) & filters.channel & ~BANNED_USERS
+    command(["انهاء"]) & filters.channel & ~BANNED_USERS
 )
-async def stop_music(cli, message: Message, _, chat_id):
+async def stop_music(cli, message: Message):
+    try:
+        await message.delete()
+    except:
+        pass
+
+    try:
+        language = await get_lang(message.chat.id)
+        _ = get_string(language)
+    except:
+        _ = get_string("en")
+    if message.command[0][0] == "c":
+        chat_id = await get_cmode(message.chat.id)
+        if chat_id is None:
+            return await message.reply_text(_["setting_7"])
+        try:
+            await app.get_chat(chat_id)
+        except:
+            return await message.reply_text(_["cplay_4"])
+    else:
+        chat_id = message.chat.id
     if not len(message.command) == 1:
         return
     await Anony.stop_stream(chat_id)
