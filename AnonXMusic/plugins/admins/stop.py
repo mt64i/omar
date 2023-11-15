@@ -29,7 +29,7 @@ async def stop_music(cli, message: Message, _, chat_id):
 
 
 @app.on_message(
-    filters.command(["end", "stop", "cend", "cstop"]) & filters.group & ~BANNED_USERS
+    filters.command(["end", "stop", "cend", "cstop"]) & filters.channel & ~BANNED_USERS
 )
 @app.on_message(
     command(["انهاء","ايقاف"]) & filters.channel & ~BANNED_USERS
