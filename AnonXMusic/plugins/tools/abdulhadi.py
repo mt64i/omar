@@ -8,7 +8,6 @@ from typing import Union
 from pyrogram.types import InlineKeyboardButton
 import re
 import sys
-from config import BANNED_USERS, MUSIC_BOT_NAME
 from pyrogram import filters
 import config
 from AnonXMusic.utils.database import (add_served_chat,
