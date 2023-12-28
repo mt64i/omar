@@ -6,18 +6,11 @@ from AnonXMusic import app
 
 
 def help_pannel(_, START: Union[bool, int] = None):
-    first = [
-        InlineKeyboardButton(
-            text=_["CLOSEMENU_BUTTON"], callback_data=f"close"
-        )
-    ]
+    first = [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data=f"close")]
     second = [
         InlineKeyboardButton(
             text=_["BACK_BUTTON"],
             callback_data=f"settingsback_helper",
-        ),
-        InlineKeyboardButton(
-            text=_["CLOSEMENU_BUTTON"], callback_data=f"close"
         ),
     ]
     mark = second if START else first
@@ -27,7 +20,7 @@ def help_pannel(_, START: Union[bool, int] = None):
                 InlineKeyboardButton(
                     text=_["H_B_1"],
                     callback_data="help_callback hb1",
-                ),                
+                ),
             ],
             [
                 InlineKeyboardButton(
@@ -36,7 +29,7 @@ def help_pannel(_, START: Union[bool, int] = None):
                 ),
                 InlineKeyboardButton(
                     text=_["H_B_3"],
-                    callback_data="help_callback hb3",
+                    callback_data="help_callback hb3",                
                 ),
             ],
             mark,
@@ -53,9 +46,6 @@ def help_back_markup(_):
                     text=_["BACK_BUTTON"],
                     callback_data=f"settings_back_helper",
                 ),
-                InlineKeyboardButton(
-                    text=_["CLOSE_BUTTON"], callback_data=f"close"
-                ),
             ]
         ]
     )
@@ -66,7 +56,7 @@ def private_help_panel(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_1"],
+                text=_["S_B_4"],
                 url=f"https://t.me/{app.username}?start=help",
             ),
         ],
