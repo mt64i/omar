@@ -7,7 +7,7 @@ from datetime import datetime
 import urllib3
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError
-from AnonXMusic.plugins.play.filters import command
+from strings.filters import command
 from pyrogram import filters
 
 import config
