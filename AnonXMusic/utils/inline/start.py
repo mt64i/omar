@@ -19,12 +19,9 @@ def start_panel(_):
 def private_panel(_):
     buttons = [
         [
-            InlineKeyboardButton(                
+            InlineKeyboardButton(
                 text=_["S_B_3"],
                 url=f"https://t.me/{app.username}?startgroup&admin=post_messages+edit_messages+delete_messages+invite_users",
-                InlineKeyboardButton(                
-                text=_["S_B_10"],
-                url=f"https://t.me/{app.username}?startchannel&admin=post_messages+edit_messages+delete_messages+invite_users",
             )
         ],
         [InlineKeyboardButton(text=_["S_B_4"], callback_data="settings_back_helper")],
