@@ -363,7 +363,7 @@ async def play_commnd(
                     _,
                     track_id,
                     user_id,
-                    "v" if video else "a",
+                    "ف" if video else "a",
                     "c" if channel else "g",
                     "f" if fplay else "d",
                 )
@@ -497,7 +497,7 @@ async def play_music(client, CallbackQuery, _):
             _["play_13"],
             reply_markup=InlineKeyboardMarkup(buttons),
         )
-    video = True if mode == "v" else None
+    video = True if mode == "ف" else None
     ffplay = True if fplay == "f" else None
     try:
         await stream(
