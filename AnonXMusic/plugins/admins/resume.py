@@ -10,7 +10,7 @@ from AnonXMusic.utils.inline import close_markup
 from config import BANNED_USERS
 
 
-@app.on_message(command(["/resume", "/cresume", "تكميل"]) & filters.group & ~BANNED_USERS)
+@app.on_message(command(["/resume", "/cresume", "استئناف"]) & filters.group & ~BANNED_USERS)
 @AdminRightsCheck
 async def resume_com(cli, message: Message, _, chat_id):
     if await is_music_playing(chat_id):
