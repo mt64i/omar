@@ -1,4 +1,5 @@
 from pyrogram import filters
+from strings.filters import command
 
 from AnonXMusic import app
 from AnonXMusic.misc import SUDOERS
