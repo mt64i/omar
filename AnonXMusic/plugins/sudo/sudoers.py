@@ -1,5 +1,5 @@
-from AnonXMusic.plugins.play.filters import command
 from pyrogram import filters
+from strings.filters import command
 from pyrogram.types import Message
 
 from AnonXMusic import app
