@@ -45,7 +45,7 @@ async def check_is_joined(message):
         return False
 
 
-@app.on_message(command(["شغل","تشغيل","فيديو"])
+@app.on_message(command(["شغل","تشغيل","ف"])
     & filters.group
     & ~BANNED_USERS
 )
