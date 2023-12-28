@@ -11,8 +11,8 @@ from AnonXMusic import app
 
 @app.on_message(command([f"غنيلي"]))
 async def ihd(client: Client, message: Message):
-    rl = random.randint(3,122)
-    url = f"https://t.me/EmmaBotVoice/{rl}"
+    rl = random.randint(3,258)
+    url = f"https://t.me/zzzssvv/{rl}"
     await client.send_voice(message.chat.id,url,caption=f"🧚🏼‍♂️ ¦ تم أختياࢪ أغنية لك {message.from_user.mention}",
     reply_markup=InlineKeyboardMarkup(
             [
@@ -41,7 +41,7 @@ async def ahmad(client: Client, message: Message):
         reply_markup=InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("‹ اضفني الى مجموعتك ›", url=f"https://t.me/ZXXCAQPBOT?startgroup=true"),
+                InlineKeyboardButton("‹ اضفني الى مجموعتك ›", url=f"https://t.me/ZXXCAQPBOT?startgroup&admin=post_messages+edit_messages+delete_messages+invite_users"),
             ],
             ]
         ),
