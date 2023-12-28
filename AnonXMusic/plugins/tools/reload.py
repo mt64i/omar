@@ -1,7 +1,7 @@
 import asyncio
 import time
 
-from AnonXMusic.plugins.play.filters import command
+from strings.filters import command
 from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter
 from pyrogram.types import CallbackQuery, Message
