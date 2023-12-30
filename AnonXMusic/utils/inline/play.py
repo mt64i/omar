@@ -66,7 +66,7 @@ def stream_markup_timer(_, chat_id, played, dur):
                 callback_data="GetTimer",
             )
         ],
-        [InlineKeyboardButton(text=f"برود .", url=f"https://t.me/zzsvv")],
+        [InlineKeyboardButton(text=f"سُــــتِۅࢪيُــاެتِ •𓋾𖥆", url=f"https://t.me/A1DIIU")],
     ]
     return buttons
 
