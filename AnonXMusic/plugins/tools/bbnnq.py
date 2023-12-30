@@ -41,19 +41,19 @@ async def ahmad(client: Client, message: Message):
         reply_markup=InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("‹ اضفني الى مجموعتك ›", url=f"https://t.me/ZXXCAQPBOT?startgroup&admin=post_messages+edit_messages+delete_messages+invite_users"),
+                InlineKeyboardButton("‹ اضفني الى مجموعتك ›", url=f"https://t.me/Xurtbot?startgroup&admin=post_messages+edit_messages+delete_messages+invite_users"),
             ],
             ]
         ),
     )
 @app.on_message(command(["مطور","السورس","سورس","المطور"]))
 async def ahmad(client: Client, message: Message):
-    await message.reply_text(f"- 𝐒ᴏụʀᴄᴇ 𝐃ᴇᴠᴇʟᴏᴘᴇʀ: @AAAQQQ 🧑‍💻",
+    await message.reply_text(f"- 𝐒ᴏụʀᴄᴇ 𝐃ᴇᴠᴇʟᴏᴘᴇʀ: @S_1_02 🧑‍💻",
         reply_markup=InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("𝘼𝙗𝙙𝙪𝙡𝙝𝙖𝙙𝙞", user_id=5338950085),
-                InlineKeyboardButton("برود .", url="https://t.me/zzsvv"),
+                InlineKeyboardButton("𝐋𝐄𝐀𝐃𝐄𝐑", user_id=5933682219),
+                InlineKeyboardButton("سُــــتِۅࢪيُــاެتِ •𓋾𖥆", url="https://t.me/A1DIIU"),
             ],
             ]
         ),
