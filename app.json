@@ -1,7 +1,7 @@
 {
-    "name": "Emma Music Bot",
+    "name": "Liz Music Bot",
     "description": "Telegram Group Calls streaming bot with some useful features, written in Python with Pyrogram and Py-Tgcalls. Supporting platforms like Youtube, Spotify, Resso, AppleMusic, Soundcloud and M3u8 Links.",
-    "logo": "https://telegra.ph/file/c0e014ff34f34d1056627.png",
+    "logo": "https://telegra.ph/file/645af9b1cc12cc0a6dfc8.jpg",
     "keywords": [
     "python3",
     "telegram",
@@ -62,6 +62,11 @@
         "description": "A Pyrogram String Session. One Assistant is Compulsory.",
         "value": "",
         "required": true
+      },
+      "STRING_SESSION2": {
+        "description": "A Pyrogram String Session2. One Assistant is Compulsory.",
+        "value": "",
+        "required": false
       },
       "LOGGER_ID": {
         "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Use only Group. Please don't use Channel ID.",
