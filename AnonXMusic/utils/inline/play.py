@@ -80,7 +80,7 @@ def stream_markup(_, chat_id):
             InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),           
         ],
-        [InlineKeyboardButton(text=f"برود .", url=f"https://t.me/zzsvv")],
+        [InlineKeyboardButton(text=f"سُــــتِۅࢪيُــاެتِ •𓋾𖥆", url=f"https://t.me/A1DIIU")],
     ]
     return buttons
 
