@@ -7,16 +7,16 @@ from pyrogram import filters
 load_dotenv()
 
 # Get this value from my.telegram.org/apps
-API_ID = int(getenv("API_ID"))
-API_HASH = getenv("API_HASH")
+API_ID = int(getenv("API_ID", 13798825))
+API_HASH = getenv("API_HASH", "0294c44762f0fae24ea4e6ac9c5f7212")
 
 # Get your token from @BotFather on Telegram.
 BOT_TOKEN = getenv("BOT_TOKEN")
 
 # Get your mongo url from cloud.mongodb.com
-MONGO_DB_URI = getenv("MONGO_DB_URI", None)
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://hajr:hajr@hajr.hvodtcb.mongodb.net/hsa?retryWrites=true&w=majority")
 
-DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", "320"))
+DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 1300))
 
 # Chat id of a group for logging bot's activities
 LOGGER_ID = int(getenv("LOGGER_ID", None))
@@ -35,9 +35,8 @@ UPSTREAM_REPO = getenv(
     "https://github.com/BLAKAQ/Zoz",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
-GIT_TOKEN = getenv(
-    "GIT_TOKEN", None
-)  # Fill this variable if your upstream repository is private
+GIT_TOKEN = getenv("GIT_TOKEN", "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")  
+# Fill this variable if your upstream repository is private
 
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/A1DIIU")
 SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/A1DIIU")
