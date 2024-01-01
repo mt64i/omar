@@ -1,7 +1,7 @@
 {
-    "name": "Liz Music Bot",
-    "description": "Telegram Group Calls streaming bot with some useful features, written in Python with Pyrogram and Py-Tgcalls. Supporting platforms like Youtube, Spotify, Resso, AppleMusic, Soundcloud and M3u8 Links.",
-    "logo": "https://telegra.ph/file/645af9b1cc12cc0a6dfc8.jpg",
+    "name": "ميـوزك 🎸 ليزز",
+    "description": "- سـورس〔 برود . 〕.. ميـوزك 🎸 لـ تشغيـل الاغانـي والفيديـو والبثـوث المباشـرة فـي المكالمـات الصوتيـه والمرئيـة عـلى تيليجــرام",
+    "logo": "https://graph.org/file/6270c9db2449eab390115.jpg",
     "keywords": [
     "python3",
     "telegram",
@@ -11,66 +11,30 @@
     "telegram-bot",
     "pyrogram"
     ],
-    "stack": "container",
     "env": {
-      "API_ID": {
-        "description": "Get this value from https://my.telegram.org",
-        "value": "28125868",
-        "required": true
-      },
-      "API_HASH": {
-        "description": "Get this value from https://my.telegram.org",
-        "value": "50183a1846ca8044f60caaf1e5d3c0c1",
-        "required": true    
-      },
       "BOT_TOKEN": {
-        "description": "A Bot's token from Botfather",
+        "description": "تـــوكـــن البـــوت - من بـوت فـاذر〔 @Botfather 〕..",
         "value": "",
-        "required": true
-     },
-      "GIT_TOKEN": {
-        "description": "A Bot's token from Botfather",
-        "value": "",
-        "required": false
-    },
-      "AUTO_LEAVING_ASSISTANT": {
-        "description": "A Bot's token from Botfather",
-        "value": "True",
-        "required": false
-     },
-      "MONGO_DB_URI": {
-        "description": "Get a mongodb url from https://cloud.mongodb.com . You can leave it blank if you want , bot will use Yukki's database for you.",
-        "value": "mongodb+srv://techz:bots@cluster0.e6jn3ch.mongodb.net/?retryWrites=true&w=majority",
-        "required": true
+        "required": true         
       },
-      "OWNER_ID": {
-        "description": "The user id(s) of user(s) whom you would like to add as a OWNER. Multiple values shall be seperated with a space.",
-        "value": "5933682219",
+      "STRING_SESSION": {
+        "description": "كـــود تيـــرمكـــس - كـود جلسـة الحسـاب المساعـد لـ الميـوزك بايـروجـرام v2 مـن البـوت〔  〕.. ",
+        "value": "",
         "required": true
       },
       "HEROKU_API_KEY": {
-        "description": "Your Heroku account's API key",
+        "description": "كـــود مفتـــاح هيروكـــو - تروح ع الرابـط »〔 https://dashboard.heroku.com/account 〕 ع آخـر خانـه وتنسـخ الكـود لهنـا",
         "value": "",
         "required": false
       },
       "HEROKU_APP_NAME": {
-        "description": "Your heroku app name",
-        "value": "",
-        "required": false
-      },
-      "STRING_SESSION": {
-        "description": "A Pyrogram String Session. One Assistant is Compulsory.",
-        "value": "",
-        "required": true
-      },
-      "STRING_SESSION2": {
-        "description": "A Pyrogram String Session2. One Assistant is Compulsory.",
+        "description": "اســـم التطبيـــق - نفـس اول مربـع بالقائمـة نسـخ لصـق حـروف انكلـش سمــول〔 صغيـره فقـط 〕..",
         "value": "",
         "required": false
       },
       "LOGGER_ID": {
-        "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Use only Group. Please don't use Channel ID.",
-        "value": "-1002120494031",
+        "description": "ادخــل ايــدي مجمـوعــة السجــل بجـانب الرقـم -100 فـي المربـع〔 سوي مجموعة جديدة وروح لاعدادات المجموعة وخلي السجل ظاهر .. بعدها ارفع البوت والحساب المساعد إشـراف وافتـح المكالمه بعدها جيب ايدي المجموعة لهنـا 〕..",
+        "value": "",
         "required": true
       }
     },
@@ -88,7 +52,8 @@
       "formation": {
           "worker": {
               "quantity": 1,
-              "size": "eco"
+              "size": "basic"
           }
-      }
+      },
+      "stack": "container"
 }
