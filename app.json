@@ -1,7 +1,7 @@
 {
-    "name": "ميـوزك 🎸 ليزز",
-    "description": "- سـورس〔 برود . 〕.. ميـوزك 🎸 لـ تشغيـل الاغانـي والفيديـو والبثـوث المباشـرة فـي المكالمـات الصوتيـه والمرئيـة عـلى تيليجــرام",
-    "logo": "https://graph.org/file/6270c9db2449eab390115.jpg",
+    "name": "ᴀɴᴏɴ ダ ᴍᴜsɪᴄ",
+    "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
+    "logo": "https://te.legra.ph/file/b8a0c1a00db3e57522b53.jpg",
     "keywords": [
     "python3",
     "telegram",
@@ -13,28 +13,28 @@
     ],
     "env": {
       "BOT_TOKEN": {
-        "description": "تـــوكـــن البـــوت - من بـوت فـاذر〔 @Botfather 〕..",
+        "description": "A Bot's token from Botfather",
         "value": "",
-        "required": true         
+        "required": true
       },
       "STRING_SESSION": {
-        "description": "كـــود تيـــرمكـــس - كـود جلسـة الحسـاب المساعـد لـ الميـوزك بايـروجـرام v2 مـن البـوت〔  〕.. ",
+        "description": "A Pyrogram v2 String Session from @StringFatherBot on Telegram.",
         "value": "",
         "required": true
       },
       "HEROKU_API_KEY": {
-        "description": "كـــود مفتـــاح هيروكـــو - تروح ع الرابـط »〔 https://dashboard.heroku.com/account 〕 ع آخـر خانـه وتنسـخ الكـود لهنـا",
+        "description": "Your Heroku account's API key",
         "value": "",
         "required": false
       },
       "HEROKU_APP_NAME": {
-        "description": "اســـم التطبيـــق - نفـس اول مربـع بالقائمـة نسـخ لصـق حـروف انكلـش سمــول〔 صغيـره فقـط 〕..",
-        "value": "",
+        "description": "Your heroku app name",
+        "value": "liizzi",
         "required": false
       },
       "LOGGER_ID": {
-        "description": "ادخــل ايــدي مجمـوعــة السجــل بجـانب الرقـم -100 فـي المربـع〔 سوي مجموعة جديدة وروح لاعدادات المجموعة وخلي السجل ظاهر .. بعدها ارفع البوت والحساب المساعد إشـراف وافتـح المكالمه بعدها جيب ايدي المجموعة لهنـا 〕..",
-        "value": "",
+        "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Channel ki id mat daal dena bsdk.",
+        "value": "-1002066809133",
         "required": true
       }
     },
@@ -49,11 +49,5 @@
               "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
           }
       ],
-      "formation": {
-          "worker": {
-              "quantity": 1,
-              "size": "basic"
-          }
-      },
       "stack": "container"
 }
