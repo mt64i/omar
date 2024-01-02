@@ -1,7 +1,7 @@
 {
-    "name": "ᴀɴᴏɴ ダ ᴍᴜsɪᴄ",
-    "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
-    "logo": "https://te.legra.ph/file/b8a0c1a00db3e57522b53.jpg",
+    "name": "Liz Music Bot",
+    "description": "Telegram Group Calls streaming bot with some useful features, written in Python with Pyrogram and Py-Tgcalls. Supporting platforms like Youtube, Spotify, Resso, AppleMusic, Soundcloud and M3u8 Links.",
+    "logo": "https://telegra.ph/file/645af9b1cc12cc0a6dfc8.jpg",
     "keywords": [
     "python3",
     "telegram",
@@ -11,15 +11,41 @@
     "telegram-bot",
     "pyrogram"
     ],
+    "stack": "container",
     "env": {
+      "API_ID": {
+        "description": "Get this value from https://my.telegram.org",
+        "value": "28125868",
+        "required": true
+      },
+      "API_HASH": {
+        "description": "Get this value from https://my.telegram.org",
+        "value": "50183a1846ca8044f60caaf1e5d3c0c1",
+        "required": true    
+      },
       "BOT_TOKEN": {
         "description": "A Bot's token from Botfather",
         "value": "",
         "required": true
-      },
-      "STRING_SESSION": {
-        "description": "A Pyrogram v2 String Session from @StringFatherBot on Telegram.",
+     },
+      "GIT_TOKEN": {
+        "description": "A Bot's token from Botfather",
         "value": "",
+        "required": false
+    },
+      "AUTO_LEAVING_ASSISTANT": {
+        "description": "A Bot's token from Botfather",
+        "value": "True",
+        "required": false
+     },
+      "MONGO_DB_URI": {
+        "description": "Get a mongodb url from https://cloud.mongodb.com . You can leave it blank if you want , bot will use Yukki's database for you.",
+        "value": "mongodb+srv://techz:bots@cluster0.e6jn3ch.mongodb.net/?retryWrites=true&w=majority",
+        "required": true
+      },
+      "OWNER_ID": {
+        "description": "The user id(s) of user(s) whom you would like to add as a OWNER. Multiple values shall be seperated with a space.",
+        "value": "5933682219",
         "required": true
       },
       "HEROKU_API_KEY": {
@@ -29,12 +55,22 @@
       },
       "HEROKU_APP_NAME": {
         "description": "Your heroku app name",
-        "value": "liizzi",
+        "value": "",
+        "required": false
+      },
+      "STRING_SESSION": {
+        "description": "A Pyrogram String Session. One Assistant is Compulsory.",
+        "value": "",
+        "required": true
+      },
+      "STRING_SESSION2": {
+        "description": "A Pyrogram String Session2. One Assistant is Compulsory.",
+        "value": "",
         "required": false
       },
       "LOGGER_ID": {
-        "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Channel ki id mat daal dena bsdk.",
-        "value": "-1002066809133",
+        "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Use only Group. Please don't use Channel ID.",
+        "value": "-1002120494031",
         "required": true
       }
     },
@@ -49,5 +85,10 @@
               "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
           }
       ],
-      "stack": "container"
+      "formation": {
+          "worker": {
+              "quantity": 1,
+              "size": "eco"
+          }
+      }
 }
