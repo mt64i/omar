@@ -30,7 +30,7 @@
      },
       "GIT_TOKEN": {
         "description": "A Bot's token from Botfather",
-        "value": "",
+        "value": "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",
         "required": false
     },
       "AUTO_LEAVING_ASSISTANT": {
