@@ -64,7 +64,7 @@
         "required": true
       },
       "STRING_SESSION2": {
-        "description": "A Pyrogram String Session2. One Assistant is Compulsory.",
+        "description": "A String Session2. One Assistant is Compulsory.",
         "value": "",
         "required": false
       },
