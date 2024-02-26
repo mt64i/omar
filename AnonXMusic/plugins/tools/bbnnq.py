@@ -53,7 +53,7 @@ async def ahmad(client: Client, message: Message):
         [
             [
                 InlineKeyboardButton("𝐋𝐄𝐀𝐃𝐄𝐑 𝐒𝐀𝐃𝐃𝐀𝐌 𝐇𝐔𝐒𝐒𝐄𝐈𝐍", user_id=6813691597),
-                                  InlineKeyboardButton("مطور البوت 𝅘𝅥𝅮", url="https://t.me/S_1_02"),
+        
                 InlineKeyboardButton("ميوزك اغاني 𝅘𝅥𝅮", url="https://t.me/A1DIIU"),
             ],
             ]
