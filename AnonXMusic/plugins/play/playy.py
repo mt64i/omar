@@ -25,7 +25,7 @@ from AnonXMusic.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical
 
 
-@app.on_message(command(["شغل","تشغيل","ف"])
+@app.on_message(command(["شغل","تشغيل","فيديو"])
     & filters.channel
     & ~BANNED_USERS
 )
