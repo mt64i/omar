@@ -28,4 +28,4 @@ async def must_join_channel(bot: Client, msg: Message):
             except ChatWriteForbidden:
                 pass
     except ChatAdminRequired:
-        print(f"I'm not admin in the MUST_JOIN chat @A1DIIU !")
+        print(f"I'm not admin in the MUST_JOIN chat @E_A_1L !")
