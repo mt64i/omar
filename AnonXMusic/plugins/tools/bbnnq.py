@@ -48,13 +48,13 @@ async def ahmad(client: Client, message: Message):
     )
 @app.on_message(command(["مطور","السورس","سورس","المطور"]))
 async def ahmad(client: Client, message: Message):
-    await message.reply_text(f"- 𝐒ᴏụʀᴄᴇ 𝐃ᴇᴠᴇʟᴏᴘᴇʀ: @A1DIIU 🧑‍💻",
+    await message.reply_text(f"- 𝐒ᴏụʀᴄᴇ 𝐃ᴇᴠᴇʟᴏᴘᴇʀ: @mt64i 🧑‍💻",
         reply_markup=InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("𝐋𝐄𝐀𝐃𝐄𝐑 𝐒𝐀𝐃𝐃𝐀𝐌 𝐇𝐔𝐒𝐒𝐄𝐈𝐍", user_id=6813691597),
+                InlineKeyboardButton("𝐦𝐭𝐚𝐞𝐦 ↑", user_id=6907555302),
         
-                InlineKeyboardButton("ميوزك اغاني 𝅘𝅥𝅮", url="https://t.me/A1DIIU"),
+                InlineKeyboardButton("ميوزك اغاني 𝅘𝅥𝅮", url="https://t.me/E_A_1L"),
             ],
             ]
         ),
