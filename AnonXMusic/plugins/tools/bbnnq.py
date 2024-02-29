@@ -48,9 +48,7 @@ async def ahmad(client: Client, message: Message):
     )
 @app.on_message(command(["مطور","السورس","سورس","المطور","تيم"]))
 async def ahmad(client: Client, message: Message):
-    await message.reply_text(f"- ხ᥆ƚ ρᥣᥲᥡᎥꪀᘜ ᥉᥆ꪀᘜ᥉ ᭙ᎥƚɦᎥꪀ ᥎᥆Ꭵᥴᥱ ᥴᥲᥣᥣ᥉ •
-➥ ძᥱ᥎: @mt64i •
-➥ ᥴɦ: @E_A_1L • ",
+    await message.reply_text(f"- تفضل حبيبي كول. @mt64i 🧑‍💻",
         reply_markup=InlineKeyboardMarkup(
         [
             [
