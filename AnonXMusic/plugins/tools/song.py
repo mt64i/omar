@@ -62,7 +62,7 @@ def song(client, message):
         message.reply_audio(
             audio_file,
             caption=rep,
-            performer="Emma Music",
+            performer=" ↑𝐒𝐘𝐑𝐈𝐀 ",
             thumb=thumb_name,
             title=title,
             duration=dur,
