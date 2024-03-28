@@ -15,7 +15,7 @@
 cd source
 lua5.2 eithon.lu@
 سورس ↑ 𝐦𝐭𝐚𝐞𝐦
-https://t.me/E_A_1L
-https://t.me/E_A_2L
+
+https://t.me/syrea_surs
 @mt64i
 https://t.me/mtaem64i
